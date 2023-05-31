@@ -4,18 +4,26 @@ $font-montserrat: "Montserrat", sans-serif;
 $font-abeezee: "ABeeZee", sans-serif;
 
 h1 {
-  padding-block: 1.4375rem;
+  display: flex;
   font-family: $font-montserrat;
   font-weight: 500;
   font-size: 3rem;
+  line-height: auto;
+  padding-top: 1.4375rem;
+  @media only screen and (min-width: 700px) {
+    font-size: 4rem;
+  }
 }
 
 p {
   font-family: $font-abeezee;
   text-align: justify;
+  padding-top: 1.4375rem;
+  line-height: 175%;
 }
 
 a {
   font-family: $font-montserrat;
   font-weight: 500;
+  text-decoration: none;
 }

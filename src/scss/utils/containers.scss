@@ -1,8 +1,21 @@
 .space-between {
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
 .align-bottom {
   margin-top: auto;
+  padding-bottom: 1.625rem;
+}
+
+.header-grid {
+  @media only screen and (min-width: 1200px) {
+    display: grid;
+    grid-template-columns: 50% 20% auto;
+  }
+
+  p {
+    grid-column-start: 3;
+  }
 }
