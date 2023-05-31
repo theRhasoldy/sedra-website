@@ -1,0 +1,21 @@
+@import url("https://fonts.googleapis.com/css2?family=ABeeZee:ital@0;1&family=Montserrat:ital,wght@0,500;1,400;1,600&display=swap");
+
+$font-montserrat: "Montserrat", sans-serif;
+$font-abeezee: "ABeeZee", sans-serif;
+
+h1 {
+  padding-block: 1.4375rem;
+  font-family: $font-montserrat;
+  font-weight: 500;
+  font-size: 3rem;
+}
+
+p {
+  font-family: $font-abeezee;
+  text-align: justify;
+}
+
+a {
+  font-family: $font-montserrat;
+  font-weight: 500;
+}
