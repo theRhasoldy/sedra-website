@@ -3,12 +3,20 @@
 body {
   background-color: $background-color;
   margin: 0 auto;
+}
+
+section {
+  padding-block: 1.5rem;
   padding-inline: 1.375rem;
   @media only screen and (min-width: 600px) {
     padding-inline: 2.375rem;
   }
 }
 
-section {
-  padding-block: 1.5rem;
+.footer,
+nav {
+  padding-inline: 1.375rem;
+  @media only screen and (min-width: 600px) {
+    padding-inline: 2.375rem;
+  }
 }

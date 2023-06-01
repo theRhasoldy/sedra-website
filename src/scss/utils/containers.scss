@@ -28,6 +28,18 @@
   }
 }
 
+.grid-3-col {
+  @media only screen and (min-width: 1200px) {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    gap: 10rem;
+  }
+}
+
+.center-title {
+  text-align: center;
+}
+
 @media only screen and (min-width: 1200px) {
   .reverse-order {
     display: flex;

@@ -18,3 +18,19 @@ h4 {
 a {
   color: $highlight-color;
 }
+
+blockquote {
+  color: $compliment-color;
+}
+
+cite {
+  color: $dominant-color;
+}
+
+.sub-cite {
+  color: $compliment-color;
+}
+
+hr {
+  border-color: $faded-color;
+}

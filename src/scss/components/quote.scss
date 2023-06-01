@@ -1,0 +1,10 @@
+@use "../abstracts/colors" as *;
+
+.quote {
+  margin-top: 2rem;
+  border-block: 0.1rem solid $faded-color;
+  padding-block: 1rem;
+  blockquote {
+    padding-bottom: 1rem;
+  }
+}
