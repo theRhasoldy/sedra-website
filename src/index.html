@@ -12,7 +12,7 @@
         <li><a href="#">SEDRA</a></li>
         <li>
           <button id="btn-expand" type="menu">
-            <img src="images/svg/menu.svg" alt="Expand icon for menu" />
+            <img src="public/svg/menu.svg" alt="Expand icon for menu" />
           </button>
         </li>
         <div class="navbar-list navbar-close-menu">
@@ -28,17 +28,17 @@
       </ul>
     </nav>
 
-    <hr />
+    <hr class="mini-hr" />
 
     <section id="hero">
       <img
         class="img-border hero-image shadow"
-        src="images/img/kaaba.jpg"
+        src="public/img/kaaba.jpg"
         alt="Picture of the Kaaba"
       />
       <div class="header-grid">
         <h1>Explore the world, create lasting memories.</h1>
-        <p>
+        <p class="hero-paragraph">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit
           veniam quidem, nihil voluptatem quis dolorem excepturi commodi
           blanditiis fugiat saepe molestiae aspernatur neque.
@@ -48,13 +48,13 @@
         <div class="space-between">
           <a href="#" class="btn-main">
             <img
-              src="images/svg/hero-button.svg"
+              src="public/svg/hero-button.svg"
               alt="Indicator of explore more"
             />
             <span> Explore More </span>
           </a>
           <div class="indicator-scroll">
-            <img src="images/svg/arrow-down.svg" alt="Scroll down" />
+            <img src="public/svg/arrow-down.svg" alt="Scroll down" />
           </div>
         </div>
       </div>
@@ -70,7 +70,7 @@
         cillum sint consectetur cupidatat.
       </p>
       <div class="card-list"></div>
-      <div class="centered">
+      <div class="more-div">
         <a href="" class="btn-more">See All Retreats</a>
       </div>
     </section>
@@ -83,11 +83,68 @@
       <div class="gallery-carousel"></div>
     </section>
 
+    <hr />
+
     <section id="about">
       <h2>About us and our philosophy</h2>
       <h3>Why Choose Us</h3>
-      <h4>Authentic</h4>
+      <div class="grid-2-col">
+        <div>
+          <article>
+            <h4>Authentic</h4>
+            <hr class="mini-hr" />
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et
+              massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien
+              fringilla, mattis ligula consectetur, ultrices mauris. Maecenas
+              vitae mattis tellus. <br /><br />Nullam quis imperdiet augue.
+              Vestibulum auctor ornare leo, non suscipit magna interdum eu.
+              Curabitur pellentesque nibh nibh, at maximus ante fermentum sit
+              amet. Pellentesque commodo lacus at sodales sodales. Quisque
+              sagittis orci ut diam condimentum, vel euismod erat placerat. In
+              iaculis arcu eros, eget tempus orci facilisis id.Lorem ipsum dolor
+              sit amet, consectetur adipiscing elit. Ut et massa mi.
+            </p>
+          </article>
+          <img
+            class="img-border img-square shadow img-padding"
+            src="public/img/group1.jpg"
+            alt="Picture of a group of people at night looking optimistic"
+          />
+        </div>
+        <div>
+          <div class="reverse-order">
+            <article>
+              <h4>Intimate</h4>
+              <hr class="mini-hr" />
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et
+                massa mi. Aliquam in hendrerit urna. Pellentesque sit amet
+                sapien fringilla, mattis ligula consectetur, ultrices mauris.
+                Maecenas vitae mattis tellus. Nullam quis imperdiet augue.
+                Vestibulum auctor ornare leo, non suscipit magna interdum eu.
+                Curabitur pellentesque nibh nibh, at maximus ante fermentum sit
+                amet. <br /><br />Pellentesque commodo lacus at sodales sodales.
+                Quisque sagittis orci ut diam condimentum, vel euismod erat
+                placerat. In iaculis arcu eros, eget tempus orci facilisis
+                id.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut
+                et massa mi.
+              </p>
+            </article>
+            <img
+              class="img-border img-square shadow img-padding"
+              src="public/img/group2.jpg"
+              alt="Picture of a couple where one is playing the guitar"
+            />
+          </div>
+        </div>
+      </div>
+      <div class="more-div">
+        <a class="btn-more" href="">Get to Know Us More</a>
+      </div>
     </section>
+
+    <hr />
 
     <script type="module" src="/js/main.js"></script>
   </body>

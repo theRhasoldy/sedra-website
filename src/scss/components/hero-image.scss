@@ -1,7 +1,12 @@
 .hero-image {
   height: 40vh;
   width: auto;
+  padding-bottom: 1.75rem;
   @media only screen and (min-width: 600px) {
     height: 55vh;
   }
+}
+
+.hero-paragraph {
+  padding: 0;
 }

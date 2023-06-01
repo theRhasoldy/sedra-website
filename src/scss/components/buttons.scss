@@ -22,3 +22,10 @@
     display: none;
   }
 }
+
+.btn-more {
+  background-color: transparent;
+  border: 0.1rem solid $highlight-color;
+  border-radius: 0.5rem;
+  padding: 0.75rem;
+}

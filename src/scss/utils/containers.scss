@@ -19,3 +19,26 @@
     grid-column-start: 3;
   }
 }
+
+.grid-2-col {
+  @media only screen and (min-width: 1200px) {
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 18rem;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .reverse-order {
+    display: flex;
+    flex-flow: column-reverse;
+  }
+}
+
+.more-div {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 5rem;
+}
