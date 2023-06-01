@@ -2,9 +2,10 @@
   overflow: hidden;
   margin-bottom: 1.75rem;
 }
+
 .slider {
   display: flex;
-  transition: transform 0.5s ease-in-out;
+  transition: transform 1.5s ease-in-out;
 }
 
 .hero-images {
@@ -18,4 +19,17 @@
 
 .hero-paragraph {
   padding: 0;
+}
+
+.gallery-carousel {
+  cursor: grab;
+  display: flex;
+  overflow-x: hidden;
+  gap: 3rem;
+  @media only screen and (min-width: 1200px) {
+    img {
+      width: 20%;
+      height: 70vh;
+    }
+  }
 }

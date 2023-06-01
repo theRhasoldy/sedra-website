@@ -1,5 +1,12 @@
 @use "../abstracts" as *;
 
+nav {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background-color: $background-color;
+}
+
 .navbar {
   padding-inline: 0;
   padding-block: 0.75rem;
@@ -30,10 +37,21 @@
   }
 }
 
-.navbar .footer-links {
+.footer-links {
+  background-color: inherit;
+  display: flex;
   flex-flow: column;
   align-items: start;
+  padding: 2rem 0;
+  li {
+    list-style: none;
+    a {
+      text-decoration: none;
+      color: $dominant-color;
+    }
+  }
   @media only screen and (min-width: 1200px) {
     align-items: end;
+    padding: 0;
   }
 }
