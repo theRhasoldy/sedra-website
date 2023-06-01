@@ -7,3 +7,17 @@ footer {
   background-color: #fae7c6;
   padding-bottom: 3rem;
 }
+
+.social-list {
+  padding-block: 1rem;
+  ul {
+    display: flex;
+    justify-content: center;
+    li {
+      list-style: none;
+      a {
+        text-decoration: none;
+      }
+    }
+  }
+}
