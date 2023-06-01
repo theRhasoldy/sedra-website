@@ -7,25 +7,27 @@
     <title>Welcome to Sedra</title>
   </head>
   <body>
-    <nav class="navbar">
-      <ul>
-        <li><a href="#">SEDRA</a></li>
-        <li>
-          <button id="btn-expand" type="menu">
-            <img src="public/svg/menu.svg" alt="Expand icon for menu" />
-          </button>
-        </li>
-        <div class="navbar-list navbar-close-menu">
-          <li><a href="#">Retreats</a></li>
-          <li><a href="#">About</a></li>
-          <li><a href="#">Gallery</a></li>
+    <nav>
+      <div class="navbar">
+        <ul>
+          <li><a href="#">SEDRA</a></li>
           <li>
-            <a href="#"
-              ><div id="btn-schedule"><span>Schedule a Call</span></div></a
-            >
+            <button id="btn-expand" type="menu">
+              <img src="public/svg/menu.svg" alt="Expand icon for menu" />
+            </button>
           </li>
-        </div>
-      </ul>
+          <div class="navbar-list navbar-close-menu">
+            <li><a href="#">Retreats</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Gallery</a></li>
+            <li>
+              <a href="#"
+                ><div id="btn-schedule"><span>Schedule a Call</span></div></a
+              >
+            </li>
+          </div>
+        </ul>
+      </div>
     </nav>
 
     <hr class="mini-hr" />
@@ -205,8 +207,19 @@
             </li>
           </ul>
         </div>
-        <p class="hero-paragraph">Based in the United States</p>
-        <a href="">info@sedra.com</a>
+        <div class="grid-2-col">
+          <div>
+            <p class="hero-paragraph">Based in the United States</p>
+            <a href="">info@sedra.com</a>
+          </div>
+          <nav class="navbar">
+            <ul class="footer-links">
+              <li><a href="#">Retreats</a></li>
+              <li><a href="#">About</a></li>
+              <li><a href="#">Gallery</a></li>
+            </ul>
+          </nav>
+        </div>
       </div>
     </footer>
     <script type="module" src="/js/main.js"></script>

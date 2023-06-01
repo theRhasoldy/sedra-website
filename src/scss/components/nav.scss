@@ -1,7 +1,8 @@
 @use "../abstracts" as *;
 
 .navbar {
-  padding-block: 1.125rem;
+  padding-inline: 0;
+  padding-block: 0.75rem;
   ul {
     display: flex;
     justify-content: space-between;
@@ -26,5 +27,13 @@
     width: 30%;
     justify-content: space-between;
     align-items: center;
+  }
+}
+
+.navbar .footer-links {
+  flex-flow: column;
+  align-items: start;
+  @media only screen and (min-width: 1200px) {
+    align-items: end;
   }
 }

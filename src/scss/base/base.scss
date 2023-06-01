@@ -20,3 +20,10 @@ nav {
     padding-inline: 2.375rem;
   }
 }
+
+hr {
+  margin-inline: 1.375rem;
+  @media only screen and (min-width: 600px) {
+    margin-inline: 2.375rem;
+  }
+}
