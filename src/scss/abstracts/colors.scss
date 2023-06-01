@@ -4,11 +4,14 @@ $highlight-color: #eba838;
 $compliment-color: #6b6b6b;
 $faded-color: #d9d9d9;
 
-h1 {
+h1,
+h3 {
   color: $dominant-color;
 }
 
-p {
+p,
+h2,
+h4 {
   color: $compliment-color;
 }
 
