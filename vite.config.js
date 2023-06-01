@@ -1,6 +1,9 @@
-export default {
-  root: "src", //project files
+import { defineConfig } from "vite";
+
+export default defineConfig({
+  root: "./src",
+
   build: {
-    outdir: "dist", //build files
+    outDir: "../dist",
   },
-};
+});
