@@ -36,6 +36,9 @@
 }
 
 .grid-4-col {
+  display: flex;
+  flex-flow: column;
+  gap: 5rem;
   @media only screen and (min-width: 1200px) {
     display: grid;
     grid-template-columns: repeat(4, auto);
