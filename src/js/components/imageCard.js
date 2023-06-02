@@ -23,8 +23,8 @@ const createImageCard = function (imageUrl) {
   class="img-border shadow"
   src="${imageUrl}"
   alt="Picture of the Kaaba"
-/>
-`;
+  />`;
+
   const carousel = document.querySelector(".gallery-carousel");
   carousel.insertAdjacentHTML("afterbegin", imageCard);
 };
