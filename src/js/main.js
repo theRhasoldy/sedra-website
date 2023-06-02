@@ -1,5 +1,7 @@
 "use strict";
 
 import "/scss/main.scss";
-import "./navbar";
-import "./slider";
+import "./firebase";
+import "./components/navbar";
+import "./components/slider";
+import "./components/imageCard";

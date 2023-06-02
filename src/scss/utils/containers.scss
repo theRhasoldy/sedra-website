@@ -30,8 +30,16 @@
 .grid-3-col {
   @media only screen and (min-width: 1200px) {
     display: grid;
-    grid-template-columns: auto auto auto;
+    grid-template-columns: repeat(3, auto);
     gap: 10rem;
+  }
+}
+
+.grid-4-col {
+  @media only screen and (min-width: 1200px) {
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    gap: 5rem;
   }
 }
 
