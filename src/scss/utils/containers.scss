@@ -38,11 +38,15 @@
 .grid-4-col {
   display: flex;
   flex-flow: column;
-  gap: 5rem;
+  gap: 3rem;
+  @media only screen and (min-width: 768px) {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+  }
   @media only screen and (min-width: 1200px) {
     display: grid;
-    grid-template-columns: repeat(4, auto);
-    gap: 5rem;
+    grid-template-columns: repeat(4, 25%);
+    gap: 3rem;
   }
 }
 

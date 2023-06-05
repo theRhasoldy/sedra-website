@@ -6,11 +6,10 @@ body {
 }
 
 section {
-  overflow-x: hidden;
-  overflow-y: visible;
+  overflow: hidden;
   padding-block: 3rem;
   padding-inline: 1.375rem;
-  @media only screen and (min-width: 600px) {
+  @media only screen and (min-width: 768px) {
     padding-inline: 2.375rem;
   }
 }
@@ -18,14 +17,14 @@ section {
 .footer,
 nav {
   padding-inline: 1.375rem;
-  @media only screen and (min-width: 600px) {
+  @media only screen and (min-width: 768px) {
     padding-inline: 2.375rem;
   }
 }
 
 hr {
   margin-inline: 1.375rem;
-  @media only screen and (min-width: 600px) {
+  @media only screen and (min-width: 768px) {
     margin-inline: 2.375rem;
   }
 }
