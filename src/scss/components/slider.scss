@@ -37,10 +37,15 @@
     display: none;
   }
 
+  img {
+    width: 100vw;
+    height: 72vh;
+  }
+
   @media only screen and (min-width: 1200px) {
     img {
       width: 20%;
-      height: 70vh;
+      max-height: 70vh;
     }
   }
 }

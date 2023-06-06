@@ -5,6 +5,9 @@ $compliment-color: #626262;
 $faded-color: #d9d9d9;
 $surface-color: #f4f4f4;
 
+$secondary-color: #ffeecf;
+$secondary-faded-color: #f1e8d8;
+
 h1,
 h3 {
   color: $dominant-color;
@@ -32,8 +35,8 @@ cite {
   color: $compliment-color;
 }
 
-hr {
-  border-color: $faded-color;
+.mini-hr {
+  color: $faded-color;
 }
 
 .retreat-card {

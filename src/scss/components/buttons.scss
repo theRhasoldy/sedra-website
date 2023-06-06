@@ -25,9 +25,8 @@
 }
 
 .btn-more {
-  background-color: transparent;
-  border: 0.1rem solid $highlight-color;
+  background-color: $highlight-color;
   border-radius: 0.5rem;
   padding: 0.75rem;
-  color: $highlight-color;
+  color: $background-color;
 }
