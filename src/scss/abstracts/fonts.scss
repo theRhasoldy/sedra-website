@@ -2,9 +2,10 @@
 
 $font-headings: "Raleway", sans-serif;
 $font-abeezee: "ABeeZee", sans-serif;
+$font-arabic: "ABeeZee", sans-serif;
 
 h1,
-h3,
+h2,
 h4 {
   // display: flex;
   font-family: $font-headings;
@@ -19,12 +20,7 @@ h1 {
 }
 
 h2 {
-  font-family: $font-abeezee;
   font-weight: 500;
-  font-size: 0.75rem;
-}
-
-h3 {
   font-size: 2.25rem;
 }
 

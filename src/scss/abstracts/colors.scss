@@ -1,6 +1,7 @@
-$background-color: #f2f2f2;
-$dominant-color: #262626;
-$highlight-color: #d2ac6a;
+$paper-color: #dcd9cf;
+$sand-color: #c5b8a5;
+$dominant-color: #1e1e1e;
+$highlight-color: #bd996a;
 $compliment-color: #626262;
 $faded-color: #d9d9d9;
 $surface-color: #f4f4f4;
@@ -8,13 +9,16 @@ $surface-color: #f4f4f4;
 $secondary-color: #ffeecf;
 $secondary-faded-color: #f1e8d8;
 
+body {
+  background-color: $paper-color;
+}
+
 h1,
-h3 {
+h2 {
   color: $dominant-color;
 }
 
 p,
-h2,
 h4 {
   color: $compliment-color;
 }
@@ -41,4 +45,16 @@ cite {
 
 .retreat-card {
   background-color: $surface-color;
+}
+
+.black-background {
+  h2,
+  h3 {
+    color: $highlight-color;
+  }
+  background-color: $dominant-color;
+}
+
+.sand-background {
+  background-color: $sand-color;
 }

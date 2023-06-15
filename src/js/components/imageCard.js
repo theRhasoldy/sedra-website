@@ -20,11 +20,24 @@ listAll(listRef)
 
 const createImageCard = function (imageUrl) {
   const imageCard = `<img
-  class="img-border shadow"
+  class="image-card img-border shadow"
   src="${imageUrl}"
   alt="Picture of the Kaaba"
   />`;
 
   const carousel = document.querySelector(".gallery-carousel");
   carousel.insertAdjacentHTML("afterbegin", imageCard);
+  const imageCards = Array.from(document.querySelectorAll(".image-card"));
+
+  carousel.addEventListener("mousedown", () => {
+    imageCards.forEach((image) => {
+      image.style.transform = "rotate(2deg)";
+    });
+  });
+
+  carousel.addEventListener("mouseup", () => {
+    imageCards.forEach((image) => {
+      image.style.transform = "rotate(0deg)";
+    });
+  });
 };
