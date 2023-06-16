@@ -16,13 +16,13 @@
 }
 
 .header-grid {
-  @media only screen and (min-width: 1200px) {
-    display: grid;
-    grid-template-columns: 50% 20% auto;
+  h1 {
+    width: 50%;
   }
-
-  p {
-    grid-column-start: 3;
+  @media only screen and (min-width: 1200px) {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
   }
 }
 

@@ -1,8 +1,9 @@
 @use "../abstracts" as *;
 
 nav {
+  position: fixed;
+  width: 100%;
   mix-blend-mode: difference;
-  position: sticky;
   top: 0;
   z-index: 100;
 }
@@ -26,8 +27,6 @@ nav {
 
 .navbar-list {
   cursor: grab;
-  background-color: transparent;
-  border-color: transparent;
   display: none;
   @media only screen and (min-width: 1200px) {
     display: flex;
@@ -38,6 +37,7 @@ nav {
 }
 
 .footer-links {
+  position: inherit;
   background-color: inherit;
   display: flex;
   flex-flow: column;
