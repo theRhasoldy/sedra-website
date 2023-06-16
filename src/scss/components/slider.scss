@@ -3,6 +3,8 @@
 .slider-container {
   overflow: hidden;
   margin-bottom: 1.75rem;
+  display: flex;
+  align-items: end;
 }
 
 .slider {
