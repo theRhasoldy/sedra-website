@@ -1,8 +1,12 @@
-.padded {
+.inline-padded {
   padding-inline: 1.375rem;
   @media only screen and (min-width: 768px) {
     padding-inline: 2.375rem;
   }
+}
+
+.block-padded {
+  padding-block: 3rem;
 }
 
 .space-between {
