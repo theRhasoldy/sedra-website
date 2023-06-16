@@ -10,10 +10,11 @@
 }
 
 #btn-schedule {
-  background-color: $dominant-color;
-  color: $paper-color;
-  border-radius: 0.5rem;
+  background-image: url("/svg/button-shorter.svg");
+  width: 215px;
+  color: $dominant-color;
   padding: 0.75rem;
+  text-align: center;
 }
 
 #btn-expand {
@@ -25,8 +26,9 @@
 }
 
 .btn-more {
-  background-color: $highlight-color;
-  border-radius: 0.5rem;
+  background-image: url("/svg/button-light.svg");
+  width: 334px;
   padding: 0.75rem;
-  color: $paper-color;
+  color: $dominant-color;
+  text-align: center;
 }

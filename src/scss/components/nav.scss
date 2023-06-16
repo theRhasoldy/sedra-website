@@ -1,10 +1,10 @@
 @use "../abstracts" as *;
 
 nav {
+  mix-blend-mode: difference;
   position: sticky;
   top: 0;
   z-index: 100;
-  color: black;
 }
 
 .navbar {
@@ -17,8 +17,8 @@ nav {
     li {
       list-style: none;
       a {
+        color: $paper-color;
         text-decoration: none;
-        color: $dominant-color;
       }
     }
   }
@@ -29,9 +29,9 @@ nav {
   background-color: transparent;
   border-color: transparent;
   display: none;
-  @media only screen and (min-width: 768px) {
+  @media only screen and (min-width: 1200px) {
     display: flex;
-    width: 30%;
+    width: 30vw;
     justify-content: space-between;
     align-items: center;
   }
@@ -42,7 +42,6 @@ nav {
   display: flex;
   flex-flow: column;
   align-items: start;
-  padding: 2rem 0;
   li {
     list-style: none;
     a {
