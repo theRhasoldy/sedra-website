@@ -39,14 +39,22 @@
     display: none;
   }
 
-  img {
+  scroll-snap-type: x mandatory;
+
+  & img {
     margin-left: 3rem;
-    width: 100vw;
+    width: 90vw;
     height: 72vh;
+    scroll-snap-align: center;
+  }
+
+  img:hover {
+    transform: rotate(10deg);
   }
 
   @media only screen and (min-width: 1200px) {
-    img {
+    & img {
+      scroll-snap-align: inherit;
       width: 20%;
       max-height: 70vh;
     }

@@ -9,7 +9,6 @@ nav {
 }
 
 .navbar {
-  padding-inline: 0;
   padding-block: 0.75rem;
   ul {
     display: flex;
@@ -37,6 +36,7 @@ nav {
 }
 
 .footer-links {
+  padding: 0;
   position: inherit;
   background-color: inherit;
   display: flex;
