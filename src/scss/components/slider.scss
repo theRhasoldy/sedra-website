@@ -48,10 +48,6 @@
     scroll-snap-align: center;
   }
 
-  img:hover {
-    transform: rotate(10deg);
-  }
-
   @media only screen and (min-width: 1200px) {
     & img {
       scroll-snap-align: inherit;
@@ -59,4 +55,8 @@
       max-height: 70vh;
     }
   }
+}
+
+.gallery-carousel:active > * {
+  transform: rotate(2deg);
 }

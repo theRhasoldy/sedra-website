@@ -7,18 +7,3 @@ body {
 section {
   overflow: hidden;
 }
-
-.footer,
-nav {
-  padding-inline: 1.375rem;
-  @media only screen and (min-width: 768px) {
-    padding-inline: 2.375rem;
-  }
-}
-
-hr {
-  margin-inline: 1.375rem;
-  @media only screen and (min-width: 768px) {
-    margin-inline: 2.375rem;
-  }
-}
