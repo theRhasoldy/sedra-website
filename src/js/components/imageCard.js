@@ -20,7 +20,7 @@ listAll(listRef)
 
 const createImageCard = function (imageUrl) {
   const imageCard = `<img
-  class="image-card img-border shadow"
+  class="image-card shadow"
   src="${imageUrl}"
   alt="Picture of the Kaaba"
   />`;

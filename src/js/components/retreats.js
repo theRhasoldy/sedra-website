@@ -7,15 +7,17 @@ class Retreat {
   #retreatCard;
   #retreatId;
 
-  constructor(container, location, price, description) {
+  constructor(container, arabicTitle, location, price, description) {
     this.container = container;
+    this.arabicTitle = arabicTitle;
     this.location = location;
     this.price = price;
     this.description = description;
   }
 
   createCard() {
-    this.#retreatCard = `<article class="retreat-card img-border shadow">
+    this.#retreatCard = `<article class="retreat-card shadow">
+    <p class="arabic-title">${this.arabicTitle}</p>
     <img
       class="img-border"
       src="/img/kaaba.jpg"
@@ -52,6 +54,7 @@ const retreatsSnapshot = await getDocs(retreatsQuery);
 retreatsSnapshot.forEach((retreatSnap) => {
   const retreat = new Retreat(
     retreatSection,
+    retreatSnap.data().arabicTitle,
     retreatSnap.data().location,
     retreatSnap.data().price,
     retreatSnap.data().description
