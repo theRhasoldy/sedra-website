@@ -39,18 +39,25 @@ cite {
   color: $faded-color;
 }
 
-.retreat-card {
-  background-color: $surface-color;
-}
-
 .black-background {
   h2,
   h3 {
     color: $highlight-color;
+  }
+  & p {
+    color: $paper-color;
   }
   background-color: $dominant-color;
 }
 
 .sand-background {
   background-color: $sand-color;
+}
+
+.retreat-card {
+  background-color: $surface-color;
+
+  & p {
+    color: $dominant-color;
+  }
 }
