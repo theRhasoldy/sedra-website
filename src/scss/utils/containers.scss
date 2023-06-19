@@ -48,7 +48,14 @@
   @media only screen and (min-width: 1200px) {
     display: grid;
     grid-template-columns: repeat(3, auto);
-    gap: 10rem;
+    column-gap: 10rem;
+  }
+}
+
+.grid-3-row {
+  @media only screen and (min-width: 1200px) {
+    display: grid;
+    grid-template-rows: repeat(3, auto);
   }
 }
 
