@@ -6,12 +6,77 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <script defer type="module" src="/js/components/getRetreat.js"></script>
   </head>
+
   <body class="booking-page">
-    <svg viewBox="0 0 243 243">
-      <filter id="noiseFilter">
-        <feTurbulence type="franctaNoise" baseFrequency="1.9"></feTurbulence>
-      </filter>
-      <rect width="100%" height="100%" filter="url(#noiseFilter)"></rect>
-    </svg>
+    <div class="noise-overlay"></div>
+    <nav>
+      <div class="navbar inline-padded">
+        <ul>
+          <li><a href="#">SEDRA</a></li>
+          <li>
+            <button id="btn-expand" type="menu">
+              <img src="/svg/menu.svg" alt="Expand icon for menu" />
+            </button>
+          </li>
+          <div class="navbar-list">
+            <li><a href="#">Retreats</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Gallery</a></li>
+            <li>
+             <a href=""><div id="btn-schedule"><span>Schedule a Call</span></div></a>
+            </li>
+          </div>
+        </ul>
+      </div>
+    </nav>
+
+    <header id="hero">
+      <div class="slider-container">
+        <div class="slider">
+          <img
+            id="booking-header-image"
+            class="hero-images"
+            src="/img/kaaba.jpg"
+            alt="picture of the kaaba"
+          />
+        </div>
+        <img class="overlay align-bottom" src="/img/cloud-top.png" alt="" />
+      </div>
+    </header>
+
+    <section>
+
+    </section>
+
+    <footer class="black-background inline-padded block-padded">
+      <div class="footer">
+        <div class="center-title">
+          <h2>Get Closer To Us</h2>
+          <div class="social-list">
+            <ul  class="narrow-gap">
+              <li>
+                <a href=""><img width="60vw" height="60vh" src="/svg/instagram.svg" alt="" /></a>
+              </li>
+              <li>
+                <a href=""><img width="60vw" height="60vh" src="/svg/facebook.svg" alt="" /></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="grid-2-col">
+          <div>
+            <p class="hero-paragraph">Based in the United States</p>
+            <a href="">info@sedra.com</a>
+          </div>
+          <nav class="footer-links">
+            <ul>
+              <li><a href="#">Retreats</a></li>
+              <li><a href="#">About</a></li>
+              <li><a href="#">Gallery</a></li>
+            </ul>
+          </nav>
+        </div>
+    </footer>
+
   </body>
 </html>

@@ -6,7 +6,7 @@
 }
 
 .block-padded {
-  padding-block: 3rem;
+  padding-block: 5rem;
 }
 
 .space-between {
@@ -36,6 +36,10 @@
     display: grid;
     grid-template-columns: auto auto;
   }
+}
+
+.narrow-gap {
+  gap: 1rem;
 }
 
 .wide-gap {

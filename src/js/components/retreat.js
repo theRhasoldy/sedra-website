@@ -1,9 +1,4 @@
-import { app } from "../firebase.js";
-import { getFirestore, collection, query, getDocs } from "firebase/firestore";
-
-const retreatSection = document.querySelector(".retreats-cards");
-
-class Retreat {
+export class Retreat {
   #retreatCard;
   #retreatId;
 
@@ -15,12 +10,12 @@ class Retreat {
     this.description = description;
   }
 
-  createCard() {
+  createCard(headerImage) {
     this.#retreatCard = `<article class="retreat-card shadow">
     <p class="arabic-title">${this.arabicTitle}</p>
     <img
       class="img-border"
-      src="/img/kaaba.jpg"
+src=${headerImage}
       alt="Card Image"
     />
     <div class="card-content">
@@ -46,19 +41,3 @@ class Retreat {
     this.#retreatId = idFromDatabase;
   }
 }
-
-const retreatsDatabase = getFirestore(app);
-const retreatsQuery = query(collection(retreatsDatabase, "retreats"));
-const retreatsSnapshot = await getDocs(retreatsQuery);
-
-retreatsSnapshot.forEach((retreatSnap) => {
-  const retreat = new Retreat(
-    retreatSection,
-    retreatSnap.data().arabicTitle,
-    retreatSnap.data().location,
-    retreatSnap.data().price,
-    retreatSnap.data().description
-  );
-  retreat.setRetreatId(retreatSnap.id);
-  retreat.createCard();
-});
