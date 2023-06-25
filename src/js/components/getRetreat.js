@@ -24,11 +24,10 @@ const retreat = new Retreat(
 );
 retreat.setRetreatId(urlParams);
 
-console.log(retreat);
-
-console.log(retreatSnap.data().headerImage);
-
 const headerImage = bookingPage.querySelector("#booking-header-image");
+const headerDesc = bookingPage.querySelector("#booking-description");
+
+headerDesc.textContent = retreat.description;
 
 const storage = getStorage();
 getDownloadURL(ref(storage, `${retreatSnap.id}/header.jpg`)).then((url) => {
