@@ -3,6 +3,7 @@ import { getStorage, ref, listAll, getDownloadURL } from "firebase/storage";
 import { getFirestore, collection, query, getDocs } from "firebase/firestore";
 
 import { Retreat } from "./retreat";
+import { createImageCard } from "./createImageCards.js";
 
 const storage = getStorage();
 
@@ -43,15 +44,3 @@ listAll(listRef)
   .catch((error) => {
     // Uh-oh, an error occurred!
   });
-
-const createImageCard = function (imageUrl) {
-  const imageCard = `<img
-  class="image-card shadow"
-  src="${imageUrl}"
-  alt="Picture of the Kaaba"
-  />`;
-
-  const carousel = document.querySelector(".gallery-carousel");
-  carousel.insertAdjacentHTML("afterbegin", imageCard);
-  const imageCards = Array.from(document.querySelectorAll(".image-card"));
-};

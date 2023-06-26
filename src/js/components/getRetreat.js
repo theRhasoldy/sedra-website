@@ -1,8 +1,11 @@
 import "/scss/main.scss";
+import "./slider.js";
+
+import { createImageCard } from "./createImageCards.js";
 
 import { app } from "../firebase.js";
 import { getFirestore, doc, getDoc } from "firebase/firestore";
-import { getStorage, ref, getDownloadURL } from "firebase/storage";
+import { getStorage, listAll, ref, getDownloadURL } from "firebase/storage";
 
 import { Retreat } from "./retreat";
 
@@ -33,3 +36,18 @@ const storage = getStorage();
 getDownloadURL(ref(storage, `${retreatSnap.id}/header.jpg`)).then((url) => {
   headerImage.src = url;
 });
+
+const listRef = ref(storage, retreatURL);
+
+// Find all the prefixes and items.
+listAll(listRef)
+  .then((res) => {
+    res.items.forEach((itemRef) => {
+      getDownloadURL(itemRef).then((url) => {
+        createImageCard(url);
+      });
+    });
+  })
+  .catch((error) => {
+    // Uh-oh, an error occurred!
+  });
