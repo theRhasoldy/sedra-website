@@ -39,6 +39,12 @@ p {
   line-height: 175%;
 }
 
+li {
+  font-family: $font-abeezee;
+  text-align: justify;
+  padding-block: 1.5rem;
+}
+
 a {
   font-family: $font-headings;
   font-weight: 500;

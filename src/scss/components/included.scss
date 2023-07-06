@@ -1,0 +1,21 @@
+@use "../abstracts/colors" as *;
+
+#inclusions {
+  li {
+    display: block;
+    list-style: none;
+    border-bottom: 0.1rem solid $compliment-color;
+    @media only screen and (min-width: 1200px) {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    div {
+      display: flex;
+      align-items: center;
+    }
+  }
+  p {
+    padding-block: 1rem;
+  }
+}

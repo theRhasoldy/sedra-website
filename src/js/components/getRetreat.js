@@ -4,11 +4,20 @@ import "./slider.js";
 import { createImageCard } from "./createImageCards.js";
 
 import { app } from "../firebase.js";
-import { getFirestore, doc, getDoc } from "firebase/firestore";
+import {
+  getFirestore,
+  doc,
+  query,
+  getDoc,
+  getDocs,
+  collection,
+} from "firebase/firestore";
+
 import { getStorage, listAll, ref, getDownloadURL } from "firebase/storage";
 
 import { Retreat } from "./retreat";
 
+// Get retreat id from url
 const urlParams = new URLSearchParams(window.location.search);
 const retreatURL = urlParams.get("retreat");
 
@@ -23,14 +32,28 @@ const retreat = new Retreat(
   retreatSnap.data().arabicTitle,
   retreatSnap.data().location,
   retreatSnap.data().price,
-  retreatSnap.data().description
+  retreatSnap.data().description,
+  retreatSnap.data().aboutRetreat,
+  retreatSnap.data().date,
+  retreatSnap.data().group
 );
+
 retreat.setRetreatId(urlParams);
 
-const headerImage = bookingPage.querySelector("#booking-header-image");
-const headerDesc = bookingPage.querySelector("#booking-description");
+// Set page data
+bookingPage.querySelector("#booking-description").textContent =
+  retreat.description;
 
-headerDesc.textContent = retreat.description;
+bookingPage.querySelector("#location").textContent = retreat.location;
+bookingPage.querySelector("#date").textContent = retreat.date;
+bookingPage.querySelector(
+  "#group"
+).textContent = `Group Size: ${retreat.group}`;
+
+bookingPage.querySelector("#booking-details").textContent =
+  retreat.aboutRetreat;
+
+const headerImage = bookingPage.querySelector("#booking-header-image");
 
 const storage = getStorage();
 getDownloadURL(ref(storage, `${retreatSnap.id}/header.jpg`)).then((url) => {
@@ -51,3 +74,16 @@ listAll(listRef)
   .catch((error) => {
     // Uh-oh, an error occurred!
   });
+
+const inclusionsQuery = query(
+  collection(db, "retreats", retreatURL, "inclusions")
+);
+const retreatSnapshots = await getDocs(inclusionsQuery);
+
+// Get inclusions and add it to retreat object
+retreatSnapshots.forEach((inclusionSnap) => {
+  retreat.inclusions.push(inclusionSnap.data());
+});
+
+const inclusionsContainer = bookingPage.querySelector("#inclusions");
+retreat.createInclusions(inclusionsContainer);

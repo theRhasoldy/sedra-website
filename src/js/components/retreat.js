@@ -1,13 +1,28 @@
 export class Retreat {
-  #retreatCard;
   #retreatId;
+  #retreatCard;
+  #inclusionItem;
 
-  constructor(container, arabicTitle, location, price, description) {
+  constructor(
+    container,
+    arabicTitle,
+    location,
+    price,
+    description,
+    aboutRetreat,
+    date,
+    group,
+    inclusions = []
+  ) {
     this.container = container;
     this.arabicTitle = arabicTitle;
     this.location = location;
     this.price = price;
     this.description = description;
+    this.date = date;
+    this.group = group;
+    this.aboutRetreat = aboutRetreat;
+    this.inclusions = inclusions;
   }
 
   createCard(headerImage) {
@@ -35,6 +50,23 @@ src=${headerImage}
   </article>`;
     this.container.insertAdjacentHTML("afterbegin", this.#retreatCard);
     return this.#retreatCard;
+  }
+
+  createInclusions(inclusionsContainer) {
+    this.inclusions.forEach((inclusion) => {
+      this.#inclusionItem = `
+        <li>
+          <div>
+            <img id="pickup" width="48px" height="48px" src="/svg/${
+              inclusion.included ? "book-icon.svg" : ""
+            }" alt="">
+              ${inclusion.name}
+          </div>
+          <p>${inclusion.note}</p>
+        </li>`;
+      inclusionsContainer.insertAdjacentHTML("afterbegin", this.#inclusionItem);
+      return this.#inclusionItem;
+    });
   }
 
   setRetreatId(idFromDatabase) {
