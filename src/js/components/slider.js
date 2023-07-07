@@ -48,17 +48,8 @@ const handleMouseMove = function (e) {
   const walk = x - startX; //scroll-fast
   carousel.scrollLeft = scrollLeft - walk;
 };
-//firebasestorage.googleapis.com/v0/b/sedra-website.appspot.com/o/gallery%2Fpexels-yousef-14030781%20(1).jpg?alt=media&token=1af925b4-48e1-4285-b2ed-7129928d0a4e
 
 carousel.addEventListener("mousedown", handleMouseDown);
 carousel.addEventListener("mouseleave", handleMouseLeave);
 carousel.addEventListener("mouseup", handleMouseUp);
 carousel.addEventListener("mousemove", handleMouseMove);
-
-const flipCards = document.querySelectorAll(".flip-card");
-
-flipCards.forEach((card) => {
-  card.addEventListener("click", function () {
-    this.classList.add("flip");
-  });
-});

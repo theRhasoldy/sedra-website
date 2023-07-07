@@ -14,7 +14,8 @@ export class Retreat {
     date,
     group,
     inclusions = [],
-    packages = []
+    packages = [],
+    itineraries = []
   ) {
     this.container = container;
     this.arabicTitle = arabicTitle;
@@ -26,6 +27,7 @@ export class Retreat {
     this.aboutRetreat = aboutRetreat;
     this.inclusions = inclusions;
     this.packages = packages;
+    this.itineraries = itineraries;
   }
 
   createCard(headerImage) {

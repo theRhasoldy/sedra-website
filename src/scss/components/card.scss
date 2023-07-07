@@ -126,9 +126,9 @@
 
 .flip-card {
   flex: none;
-  width: 50ch;
+  width: 44ch;
   padding: 0;
-  margin-right: 3rem;
+  margin-left: 3rem;
   transition: transform 0.5s ease-in-out;
   position: relative;
   .cover {
@@ -136,12 +136,14 @@
     backface-visibility: hidden;
     transform: perspective(600px) rotateY(0deg);
     img {
+      padding: 0.5rem;
       margin: 0;
       width: max-content;
     }
   }
 
   .content {
+    padding: 0.5rem;
     background-color: $surface-color;
     position: absolute;
     height: 100%;
@@ -151,8 +153,8 @@
   }
 
   & h3 {
+    padding: 1rem;
     background-color: $surface-color;
-    padding: 0rem;
   }
 
   & a {
