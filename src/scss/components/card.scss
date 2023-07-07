@@ -1,5 +1,71 @@
 @use "../abstracts" as *;
 
+#retreats-cards,
+#packages,
+#itinerary {
+  li {
+    list-style: none;
+  }
+}
+
+.package-card {
+  transition: transform 0.5s ease-in-out;
+  width: 100%;
+  height: fit-content;
+  background-color: $surface-color;
+
+  & h3 {
+    padding: 0rem;
+  }
+
+  & .card-content {
+    height: max-content;
+    padding: 1rem;
+    display: grid;
+    height: 40%;
+    flex-flow: column;
+
+    .package-detail {
+      padding-block: 0;
+      font-size: 0.75rem;
+      color: $compliment-color;
+    }
+    .package-price {
+      p {
+        padding-block: 0;
+        color: $highlight-color;
+        &:first-child {
+          font-size: 2rem;
+        }
+        &:last-child {
+          font-size: 0.75rem;
+        }
+      }
+    }
+  }
+
+  & a {
+    display: flex;
+    gap: 0.75rem;
+    transition: all 0.5s ease;
+    margin-top: auto;
+    img {
+      height: 3rem;
+      width: auto;
+    }
+    span {
+      padding: 0;
+    }
+  }
+  & a:hover {
+    gap: 1.5rem;
+  }
+}
+
+.package-card:hover {
+  transform: translatey(-10px);
+}
+
 .retreat-card {
   transition: transform 0.5s ease-in-out;
   width: 100%;
@@ -49,11 +115,69 @@
 }
 
 .retreat-card:hover {
-  transform: translateY(-10px);
+  transform: translatey(-10px);
 }
 
 .image-card {
   padding: 0.5rem 0.5rem 3rem 0.5rem;
   background-color: $surface-color;
   transition: transform 0.2s ease-in;
+}
+
+.flip-card {
+  flex: none;
+  width: 50ch;
+  padding: 0;
+  margin-right: 3rem;
+  transition: transform 0.5s ease-in-out;
+  position: relative;
+  .cover {
+    transition: transform 0.5s ease-in-out;
+    backface-visibility: hidden;
+    transform: perspective(600px) rotateY(0deg);
+    img {
+      margin: 0;
+      width: max-content;
+    }
+  }
+
+  .content {
+    background-color: $surface-color;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    transition: transform 0.5s ease-in-out;
+    transform: perspective(600px) rotateY(180deg);
+  }
+
+  & h3 {
+    background-color: $surface-color;
+    padding: 0rem;
+  }
+
+  & a {
+    display: flex;
+    gap: 0.75rem;
+    transition: all 0.5s ease;
+    margin-top: auto;
+    img {
+      height: 3rem;
+      width: auto;
+    }
+    span {
+      padding: 0;
+    }
+  }
+  & a:hover {
+    gap: 1.5rem;
+  }
+}
+
+.flip-card:hover {
+  .cover {
+    transform: perspective(600px) rotateY(180deg);
+  }
+  .content {
+    transform: perspective(600px) rotateY(360deg);
+  }
 }

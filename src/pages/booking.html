@@ -5,6 +5,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <script defer type="module" src="/js/components/getRetreat.js"></script>
+    <script defer type="module" src="/js/components/book.js"></script>
   </head>
 
   <body class="sand-background booking-page">
@@ -76,14 +77,74 @@
     <section class="block-padded inline-padded">
       <h2 class="center-title">What's Included</h2>
       <ul id="inclusions" class="block-padded"></ul>
+    </section>
 
+    <section class="block-padded inline-padded">
+      <h2 class="center-title">Available Packages</h2>
+      <ul id="packages" class="block-padded grid-4-col"></ul>
+    </section>
+
+    <section class="block-padded">
+      <h2 class="center-title">Itinerary</h2>
+      <div id="itinerary" class="gallery-carousel">
+        <article class="flip-card">
+          <div class="content shadow">
+            <h3>test</h3>
+            <p>testdjksfhj shlskdjlk j lkdsj flkdsjflks hjkjsdhfjksfdhfkjgd shkljsdhg kl</p>
+          </div>
+          <div class="cover">
+            <img src="/img/kaaba.jpg" alt="">
+            <h3>day 1</h3>
+          </div>
+        </article>
+        <article class="flip-card">
+          <div class="content shadow">
+            <h3>test</h3>
+            <p>testdjksfhj shlskdjlk j lkdsj flkdsjflks hjkjsdhfjksfdhfkjgd shkljsdhg kl</p>
+          </div>
+          <div class="cover">
+            <img src="/img/kaaba.jpg" alt="">
+            <h3>day 1</h3>
+          </div>
+        </article>
+        <article class="flip-card">
+          <div class="content shadow">
+            <h3>test</h3>
+            <p>testdjksfhj shlskdjlk j lkdsj flkdsjflks hjkjsdhfjksfdhfkjgd shkljsdhg kl</p>
+          </div>
+          <div class="cover">
+            <img src="/img/kaaba.jpg" alt="">
+            <h3>day 1</h3>
+          </div>
+        </article>
+        <article class="flip-card">
+          <div class="content shadow">
+            <h3>test</h3>
+            <p>testdjksfhj shlskdjlk j lkdsj flkdsjflks hjkjsdhfjksfdhfkjgd shkljsdhg kl</p>
+          </div>
+          <div class="cover">
+            <img src="/img/kaaba.jpg" alt="">
+            <h3>day 1</h3>
+          </div>
+        </article>
+        <article class="flip-card">
+          <div class="content shadow">
+            <h3>test</h3>
+            <p>testdjksfhj shlskdjlk j lkdsj flkdsjflks hjkjsdhfjksfdhfkjgd shkljsdhg kl</p>
+          </div>
+          <div class="cover">
+            <img src="/img/kaaba.jpg" alt="">
+            <h3>day 1</h3>
+          </div>
+        </article>
+      </div>
     </section>
 
     <section id="gallery" class="block-padded">
       <img width="100%" loading="lazy" src="/img/cloud-top.png" alt="old radio">
       <div class="paper-background">
         <h2 class="inline-padded center-title">Pictures From This Retreat</h2>
-        <div class="gallery-carousel"></div>
+        <div class="gallery-carousel" id="gallery-carousel"></div>
       </div>
       <img width="100%" loading="lazy" src="/img/cloud-bottom.png" alt="old radio">
     </section>

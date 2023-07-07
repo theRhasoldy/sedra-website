@@ -23,6 +23,7 @@
 }
 
 .gallery-carousel {
+  width: 100%;
   scroll-snap-type: proximity;
   padding-block: 3rem;
   cursor: grab;
@@ -40,15 +41,14 @@
 
   & img {
     margin-left: 3rem;
-    width: 90vw;
     height: 72vh;
     scroll-snap-align: center;
   }
 
   @media only screen and (min-width: 1200px) {
     & img {
+      width: 25%;
       scroll-snap-align: inherit;
-      width: 20%;
       max-height: 70vh;
     }
   }

@@ -2,6 +2,7 @@ export class Retreat {
   #retreatId;
   #retreatCard;
   #inclusionItem;
+  #packageCard;
 
   constructor(
     container,
@@ -12,7 +13,8 @@ export class Retreat {
     aboutRetreat,
     date,
     group,
-    inclusions = []
+    inclusions = [],
+    packages = []
   ) {
     this.container = container;
     this.arabicTitle = arabicTitle;
@@ -23,10 +25,11 @@ export class Retreat {
     this.group = group;
     this.aboutRetreat = aboutRetreat;
     this.inclusions = inclusions;
+    this.packages = packages;
   }
 
   createCard(headerImage) {
-    this.#retreatCard = `<article class="retreat-card shadow">
+    this.#retreatCard = `<li><article class="retreat-card shadow">
     <p class="arabic-title">${this.arabicTitle}</p>
     <img
       class="img-border"
@@ -47,7 +50,7 @@ src=${headerImage}
         />
       </a>
     </div>
-  </article>`;
+  </article></li>`;
     this.container.insertAdjacentHTML("afterbegin", this.#retreatCard);
     return this.#retreatCard;
   }
@@ -66,6 +69,39 @@ src=${headerImage}
         </li>`;
       inclusionsContainer.insertAdjacentHTML("afterbegin", this.#inclusionItem);
       return this.#inclusionItem;
+    });
+  }
+
+  createPackage(packagesContainer) {
+    this.packages.forEach((packageItem) => {
+      this.#packageCard = `
+        <li>
+          <article class="package-card block-padded inline-padded shadow">
+            <div class="card-content">
+              <h3>${packageItem.name}</h3>
+              <div class="package-price">
+                <p>$${packageItem.price}</p>
+                <p>DEPOSIT ($${packageItem.deposit})</p>              
+              </div>
+              <h4>Package Details</h4>
+              <p>${packageItem.details}</p>
+              <a href="" class="btn-main">
+                <span>Book Now</span>
+                <img
+                  src="/svg/book-icon.svg"
+                  alt="Indicator of explore more"
+                />
+              </a>
+              <p class="package-detail">
+                Available until ${packageItem.date} ${
+        packageItem.soldOut ? " | Sold Out" : ""
+      }
+              </p>
+            </div>
+          </article>
+        </li>`;
+      packagesContainer.insertAdjacentHTML("afterbegin", this.#packageCard);
+      return this.#packageCard;
     });
   }
 

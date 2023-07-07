@@ -54,3 +54,11 @@ carousel.addEventListener("mousedown", handleMouseDown);
 carousel.addEventListener("mouseleave", handleMouseLeave);
 carousel.addEventListener("mouseup", handleMouseUp);
 carousel.addEventListener("mousemove", handleMouseMove);
+
+const flipCards = document.querySelectorAll(".flip-card");
+
+flipCards.forEach((card) => {
+  card.addEventListener("click", function () {
+    this.classList.add("flip");
+  });
+});

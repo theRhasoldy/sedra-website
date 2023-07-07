@@ -75,15 +75,24 @@ listAll(listRef)
     // Uh-oh, an error occurred!
   });
 
+// Get inclusions and add it to retreat object
 const inclusionsQuery = query(
   collection(db, "retreats", retreatURL, "inclusions")
 );
-const retreatSnapshots = await getDocs(inclusionsQuery);
+const inclusionSnapshots = await getDocs(inclusionsQuery);
 
-// Get inclusions and add it to retreat object
-retreatSnapshots.forEach((inclusionSnap) => {
+inclusionSnapshots.forEach((inclusionSnap) => {
   retreat.inclusions.push(inclusionSnap.data());
 });
-
 const inclusionsContainer = bookingPage.querySelector("#inclusions");
 retreat.createInclusions(inclusionsContainer);
+
+// Get packages and add it to retreat object
+const packagesQuery = query(collection(db, "retreats", retreatURL, "packages"));
+const packageSnapshots = await getDocs(packagesQuery);
+
+packageSnapshots.forEach((packageSnap) => {
+  retreat.packages.push(packageSnap.data());
+});
+const packagesContainer = bookingPage.querySelector("#packages");
+retreat.createPackage(packagesContainer);

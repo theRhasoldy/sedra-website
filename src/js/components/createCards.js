@@ -7,7 +7,7 @@ import { createImageCard } from "./createImageCards.js";
 
 const storage = getStorage();
 
-const retreatSection = document.querySelector(".retreats-cards");
+const retreatSection = document.querySelector("#retreats-cards");
 
 // Create a reference under which you want to list
 const listRef = ref(storage, "gallery");

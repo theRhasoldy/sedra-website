@@ -5,7 +5,7 @@ export const createImageCard = function (imageUrl) {
   alt="Picture of the Kaaba"
   />`;
 
-  const carousel = document.querySelector(".gallery-carousel");
+  const carousel = document.querySelector("#gallery-carousel");
   carousel.insertAdjacentHTML("beforeend", imageCard);
   const imageCards = Array.from(document.querySelectorAll(".image-card"));
 };
