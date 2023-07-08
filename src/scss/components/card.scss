@@ -75,7 +75,7 @@
   & img {
     padding: 0rem 0.5rem 0rem 0.5rem;
     width: 100%;
-    height: 60%;
+    height: 45vh;
     aspect-ratio: 1/1;
   }
 
@@ -83,7 +83,7 @@
     height: max-content;
     padding: 1rem;
     display: grid;
-    height: 40%;
+    height: auto;
     flex-flow: column;
   }
 

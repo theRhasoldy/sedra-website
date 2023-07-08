@@ -10,6 +10,7 @@
 }
 
 #btn-schedule {
+  mix-blend-mode: normal;
   background-image: url("/svg/button-shorter.svg");
   width: 215px;
   color: $dominant-color;
@@ -21,7 +22,8 @@
   cursor: pointer;
   z-index: 1000;
   display: flex;
-  color: black;
+  background-color: transparent;
+  border: none;
   @media only screen and (min-width: 1200px) {
     display: none;
   }

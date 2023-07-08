@@ -1,8 +1,8 @@
 <svg width="52" height="47" viewBox="0 0 52 47" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g filter="url(#filter0_d_178_28)">
-<rect width="12" height="12" transform="matrix(0.736332 0.67662 -0.736332 0.67662 27.8359 15)" fill="#EBA838"/>
+<rect width="12" height="12" transform="matrix(0.736332 0.67662 -0.736332 0.67662 27.8359 15)" fill="#BD996A"/>
 </g>
-<line y1="23.5" x2="21" y2="23.5" stroke="#EBA838"/>
+<line y1="23.5" x2="21" y2="23.5" stroke="#BD996A"/>
 <defs>
 <filter id="filter0_d_178_28" x="4" y="0" width="47.6719" height="46.2388" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
 <feFlood flood-opacity="0" result="BackgroundImageFix"/>
@@ -10,7 +10,7 @@
 <feOffset/>
 <feGaussianBlur stdDeviation="7.5"/>
 <feComposite in2="hardAlpha" operator="out"/>
-<feColorMatrix type="matrix" values="0 0 0 0 0.8927 0 0 0 0 0.691812 0 0 0 0 0.3673 0 0 0 1 0"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0.878431 0 0 0 0 0.796078 0 0 0 0 0.65098 0 0 0 1 0"/>
 <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_178_28"/>
 <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_178_28" result="shape"/>
 </filter>
