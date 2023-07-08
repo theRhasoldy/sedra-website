@@ -32,7 +32,19 @@
 }
 
 .grid-2-col {
+  display: flex;
+  flex-direction: column;
+  .smaller-image {
+    padding-right: 28%;
+  }
+  .smaller-image-reverse {
+    padding-left: 20%;
+  }
   @media only screen and (min-width: 1200px) {
+    .smaller-image,
+    .smaller-image-reverse {
+      padding: 0;
+    }
     display: grid;
     grid-template-columns: auto auto;
   }

@@ -3,6 +3,7 @@ export class Retreat {
   #retreatCard;
   #inclusionItem;
   #packageCard;
+  #itineraryCard;
 
   constructor(
     container,
@@ -104,6 +105,29 @@ src=${headerImage}
         </li>`;
       packagesContainer.insertAdjacentHTML("afterbegin", this.#packageCard);
       return this.#packageCard;
+    });
+  }
+
+  createItinerary(itineraryContainer) {
+    this.itineraries.forEach((itinerary) => {
+      this.#itineraryCard = `
+        <article class="flip-card">
+          <div class="content shadow">
+            <h3>${itinerary.name}</h3>
+            <p>${itinerary.details}</p>
+          </div>
+          <div class="cover">
+            <img src="/img/kaaba.jpg" alt="">
+            <h3>${itinerary.name}</h3>
+          </div>
+        </article>
+              </p>
+            </div>
+          </article>
+        </li>`;
+
+      itineraryContainer.insertAdjacentHTML("beforeend", this.#itineraryCard);
+      return this.#itineraryCard;
     });
   }
 

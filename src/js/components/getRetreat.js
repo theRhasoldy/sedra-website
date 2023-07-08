@@ -96,3 +96,15 @@ packageSnapshots.forEach((packageSnap) => {
 });
 const packagesContainer = bookingPage.querySelector("#packages");
 retreat.createPackage(packagesContainer);
+
+// Get itinerary and add it to retreat object
+const itineraryQuery = query(
+  collection(db, "retreats", retreatURL, "itineraries")
+);
+const itinerarySnapshots = await getDocs(itineraryQuery);
+
+itinerarySnapshots.forEach((itinerarySnap) => {
+  retreat.itineraries.push(itinerarySnap.data());
+});
+const itineraryContainer = bookingPage.querySelector("#itinerary");
+retreat.createItinerary(itineraryContainer);
