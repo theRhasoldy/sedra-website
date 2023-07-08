@@ -5,7 +5,14 @@
   align-items: center;
   color: $highlight-color;
   span {
+    transition: all 0.5s ease;
     padding-left: 0.5rem;
+  }
+}
+
+.btn-main:hover {
+  span {
+    padding-left: 1.5rem;
   }
 }
 
@@ -30,9 +37,12 @@
 }
 
 .btn-more {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background-image: url("/svg/button-light.svg");
   width: 334px;
-  padding: 0.75rem;
+  padding: 0.25rem;
   color: $dominant-color;
   text-align: center;
 }

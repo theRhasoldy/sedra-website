@@ -46,11 +46,11 @@ src=${headerImage}
       </div>
       <p>${this.description}</p>
 <a href="/pages/booking.html?retreat=${this.#retreatId}" class="btn-main">
-        <span>Book Now</span>
         <img
           src="/svg/book-icon.svg"
           alt="Indicator of explore more"
         />
+        <span>Book Now</span>
       </a>
     </div>
   </article></li>`;
