@@ -91,6 +91,7 @@ nav {
   flex-flow: column;
   align-items: start;
   li {
+    padding-block: 1rem;
     list-style: none;
     a {
       color: $paper-color;
