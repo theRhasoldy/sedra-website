@@ -9,9 +9,10 @@ export default defineConfig({
     rollupOptions: {
       input: {
         main: resolve(__dirname, "src/index.html"),
-        pages: resolve(__dirname, "src/pages/booking.html")
-      }
-    }
+        booking: resolve(__dirname, "src/pages/booking.html"),
+        retreats: resolve(__dirname, "src/pages/allRetreats.html"),
+      },
+    },
   },
   publicDir: "../public",
 });
