@@ -49,7 +49,7 @@ const handleMouseMove = function (e) {
   carousel.scrollLeft = scrollLeft - walk;
 };
 
-carousel.addEventListener("mousedown", handleMouseDown);
-carousel.addEventListener("mouseleave", handleMouseLeave);
-carousel.addEventListener("mouseup", handleMouseUp);
-carousel.addEventListener("mousemove", handleMouseMove);
+carousel?.addEventListener("mousedown", handleMouseDown);
+carousel?.addEventListener("mouseleave", handleMouseLeave);
+carousel?.addEventListener("mouseup", handleMouseUp);
+carousel?.addEventListener("mousemove", handleMouseMove);

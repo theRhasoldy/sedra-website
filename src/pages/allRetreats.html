@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Welcome to Sedra</title>
+    <script defer type="module" src="/js/main.js"></script>
+  </head>
+
+  <body>
+    <div class="noise-overlay"></div>
+    <nav>
+      <div class="navbar inline-padded">
+        <ul>
+          <li><a href="/">SEDRA</a></li>
+          <li>
+            <button id="btn-expand" type="menu">
+              <img src="/svg/menu.svg" alt="Expand icon for menu" />
+            </button>
+          </li>
+          <div class="navbar-list">
+            <li><a href="#retreats">Retreats</a></li>
+            <li><a href="#gallery">Gallery</a></li>
+            <li><a href="#values">About</a></li>
+            <li>
+              <a href=""><div id="btn-schedule"><span>Schedule a Call</span></div></a>
+            </li>
+          </div>
+        </ul>
+      </div>
+    </nav>
+
+    <header id="hero">
+      <div class="slider-container">
+        <div class="slider">
+          <img
+            class="hero-images"
+            src="/img/kaaba.jpg"
+            alt="picture of the kaaba"
+          />
+        </div>
+        <img class="overlay align-bottom" src="/img/cloud-top.png" alt="">
+      </div>
+
+      <div class="header-grid inline-padded block-padded">
+        <h1>explore the world, create lasting <b>memories</b>.</h1>
+      </div>
+    </header>
+
+    <section id="retreats" class="inline-padded block-padded block-padded">
+      <h2 class="center-title">All Retreats</h2>
+      <p class="center-title">
+        Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint
+        cillum sint consectetur cupidatat.
+      </p>
+      <ul id="retreats-cards" class="allRetreats grid-4-col"></ul>
+    </section>
+
+      <img class="black-background" src="/img/cloud-bottom.png" alt="">
+    <footer class="black-background inline-padded block-padded">
+      <div class="footer">
+        <div class="center-title">
+          <h2>Get Closer To Us</h2>
+          <div class="social-list">
+            <ul  class="narrow-gap">
+              <li>
+                <a href=""><img width="40vw" height="auto" src="/svg/instagram.svg" alt="" /></a>
+              </li>
+              <li>
+                <a href=""><img width="40vw" height="auto" src="/svg/facebook.svg" alt="" /></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="grid-2-col">
+          <div>
+            <p class="hero-paragraph">Based in the United States</p>
+            <a href="">info@sedra.com</a>
+          </div>
+          <nav class="footer-links">
+            <ul>
+            <li><a href="#retreats">Retreats</a></li>
+            <li><a href="#gallery">Gallery</a></li>
+            <li><a href="#values">About</a></li>
+            </ul>
+          </nav>
+        </div>
+    </footer>
+  </body>
+</html>

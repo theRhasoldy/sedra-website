@@ -29,6 +29,7 @@ const bookingPage = document.querySelector(".booking-page");
 
 const retreat = new Retreat(
   bookingPage,
+  retreatSnap.data().highlighted,
   retreatSnap.data().arabicTitle,
   retreatSnap.data().location,
   retreatSnap.data().price,

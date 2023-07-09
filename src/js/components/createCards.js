@@ -19,6 +19,7 @@ const retreatsSnapshot = await getDocs(retreatsQuery);
 retreatsSnapshot.forEach((retreatSnap) => {
   const retreat = new Retreat(
     retreatSection,
+    retreatSnap.data().highlighted,
     retreatSnap.data().arabicTitle,
     retreatSnap.data().location,
     retreatSnap.data().price,

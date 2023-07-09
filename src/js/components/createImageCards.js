@@ -6,6 +6,6 @@ export const createImageCard = function (imageUrl) {
   />`;
 
   const carousel = document.querySelector("#gallery-carousel");
-  carousel.insertAdjacentHTML("beforeend", imageCard);
+  carousel?.insertAdjacentHTML("beforeend", imageCard);
   const imageCards = Array.from(document.querySelectorAll(".image-card"));
 };

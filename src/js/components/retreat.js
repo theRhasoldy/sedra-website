@@ -7,6 +7,7 @@ export class Retreat {
 
   constructor(
     container,
+    highlighted,
     arabicTitle,
     location,
     price,
@@ -19,6 +20,7 @@ export class Retreat {
     itineraries = []
   ) {
     this.container = container;
+    this.highlighted = highlighted;
     this.arabicTitle = arabicTitle;
     this.location = location;
     this.price = price;
@@ -54,8 +56,16 @@ src=${headerImage}
       </a>
     </div>
   </article></li>`;
-    this.container.insertAdjacentHTML("afterbegin", this.#retreatCard);
-    return this.#retreatCard;
+
+    if (this.highlighted) {
+      this.container.insertAdjacentHTML("afterbegin", this.#retreatCard);
+      return this.#retreatCard;
+    }
+
+    if (this.container.classList.contains("allRetreats")) {
+      this.container.insertAdjacentHTML("afterbegin", this.#retreatCard);
+      return this.#retreatCard;
+    }
   }
 
   createInclusions(inclusionsContainer) {
