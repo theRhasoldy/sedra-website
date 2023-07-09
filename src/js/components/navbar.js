@@ -11,3 +11,9 @@ expandBtn.addEventListener("click", () => {
   }
   navbarList.classList.toggle("burger-list");
 });
+
+navbarList.addEventListener("click", () => {
+  nav.style.mixBlendMode = "difference";
+  nav.classList.remove("burger-menu");
+  navbarList.classList.remove("burger-list");
+});
