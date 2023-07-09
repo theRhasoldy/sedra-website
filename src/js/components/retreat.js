@@ -73,8 +73,8 @@ src=${headerImage}
       this.#inclusionItem = `
         <li>
           <div>
-            <img id="pickup" width="48px" height="48px" src="/svg/${
-              inclusion.included ? "book-icon.svg" : "circle.svg"
+            <img id="pickup" width="64px" height="auto" src="/svg/${
+              inclusion.included ? "book-icon.svg" : "unavaliable.svg"
             }" alt="">
               ${inclusion.name}
           </div>

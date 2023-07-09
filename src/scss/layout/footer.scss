@@ -1,7 +1,27 @@
 @use "../abstracts/colors.scss" as *;
 
 footer {
-  padding-bottom: 3rem;
+  nav {
+    width: initial;
+  }
+  .links {
+    display: flex;
+    align-items: center;
+    flex-direction: column-reverse;
+    ul li {
+      text-align: center;
+    }
+  }
+  @media only screen and (min-width: 1200px) {
+    .links {
+      display: flex;
+      flex-direction: initial;
+      justify-content: space-between;
+      ul li {
+        text-align: end;
+      }
+    }
+  }
 }
 
 .social-list {
