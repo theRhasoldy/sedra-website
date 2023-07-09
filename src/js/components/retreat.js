@@ -74,7 +74,7 @@ src=${headerImage}
         <li>
           <div>
             <img id="pickup" width="48px" height="48px" src="/svg/${
-              inclusion.included ? "book-icon.svg" : ""
+              inclusion.included ? "book-icon.svg" : "circle.svg"
             }" alt="">
               ${inclusion.name}
           </div>

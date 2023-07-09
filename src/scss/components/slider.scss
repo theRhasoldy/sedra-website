@@ -25,7 +25,6 @@
 .gallery-carousel {
   margin: 0 auto;
   width: 100%;
-  scroll-snap-type: proximity;
   padding-block: 3rem;
   cursor: grab;
   display: flex;
@@ -57,4 +56,28 @@
 
 .gallery-carousel:active > * {
   transform: rotate(2deg);
+}
+
+.indicator {
+  display: flex;
+  align-items: center;
+  :first-child {
+    animation-name: indicate;
+    animation-duration: 2s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    position: absolute;
+  }
+}
+
+@keyframes indicate {
+  0% {
+    transform: translateX(0);
+  }
+  80% {
+    transform: translateX(20px);
+  }
+  100% {
+    transform: translateX(0);
+  }
 }
