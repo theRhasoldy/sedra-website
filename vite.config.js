@@ -1,18 +1,24 @@
 import { defineConfig } from "vite";
-import { resolve } from "path";
+import { fileURLToPath } from "url";
 
 export default defineConfig({
   root: "./src",
+  publicDir: "../public",
   build: {
+    cssCodeSplit: false,
     target: "esnext",
     outDir: "../dist",
     rollupOptions: {
       input: {
-        main: resolve(__dirname, "src/index.html"),
-        booking: resolve(__dirname, "src/pages/booking.html"),
-        retreats: resolve(__dirname, "src/pages/allRetreats.html"),
+        index: fileURLToPath(new URL("/index.html", import.meta.url)),
+        booking: fileURLToPath(new URL("/pages/booking.html", import.meta.url)),
+        allRetreats: fileURLToPath(
+          new URL("/pages/allRetreats.html", import.meta.url)
+        ),
+      },
+      output: {
+        preserveModules: false,
       },
     },
   },
-  publicDir: "../public",
 });
