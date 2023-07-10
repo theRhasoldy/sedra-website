@@ -46,3 +46,20 @@
   color: $dominant-color;
   text-align: center;
 }
+
+.card-book {
+  cursor: pointer;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 1rem;
+  background-color: transparent;
+}
+
+.card-book:hover {
+  span {
+    transition: all 0.5s ease;
+    padding-right: 1rem;
+  }
+}

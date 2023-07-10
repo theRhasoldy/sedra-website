@@ -3,6 +3,7 @@ export class Retreat {
   #retreatCard;
   #inclusionItem;
   #packageCard;
+  #packageOption;
   #itineraryCard;
 
   constructor(
@@ -98,13 +99,12 @@ src=${headerImage}
               </div>
               <h4>Package Details</h4>
               <p>${packageItem.details}</p>
-              <a href="" class="btn-main">
+              <button data-package="${packageItem.name}" class="card-book">
                 <span>Book Now</span>
                 <img
                   src="/svg/book-icon.svg"
-                  alt="Indicator of explore more"
-                />
-              </a>
+                  alt="Indicator of explore more">
+              </button>
               <p class="package-detail">
                 Available until ${packageItem.date} ${
         packageItem.soldOut ? " | Sold Out" : ""
@@ -114,6 +114,14 @@ src=${headerImage}
           </article>
         </li>`;
       packagesContainer.insertAdjacentHTML("afterbegin", this.#packageCard);
+      return this.#packageCard;
+    });
+  }
+
+  createPackageOption(select) {
+    this.packages.forEach((packageItem) => {
+      this.#packageOption = `<option value="${packageItem.name}">${packageItem.name} (${packageItem.price})</option>`;
+      select.insertAdjacentHTML("afterbegin", this.#packageOption);
       return this.#packageCard;
     });
   }
