@@ -40,7 +40,8 @@
   scroll-snap-type: x mandatory;
 
   & img {
-    margin-left: 3rem;
+    margin-inline: 1.5rem;
+    max-width: 88vw;
     height: 72vh;
     scroll-snap-align: center;
   }
