@@ -40,10 +40,9 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background-image: url("/svg/button-light.svg");
-  width: 334px;
-  padding: 0.25rem;
-  color: $dominant-color;
+  border: 0.15rem solid $highlight-color;
+  padding: 1rem 2rem;
+  color: $highlight-color;
   text-align: center;
 }
 

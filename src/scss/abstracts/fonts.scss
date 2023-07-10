@@ -8,6 +8,7 @@ $font-arabic: "Aref Ruqaa", sans-serif;
 h1 {
   padding-top: 1rem;
   font-family: $font-headings;
+  text-transform: uppercase;
 }
 
 h2,
@@ -22,7 +23,7 @@ h3 {
 }
 
 h1 {
-  font-size: clamp(1.72rem, 3.6vw, 5rem);
+  font-size: clamp(1.47rem, 3.6vw, 5rem);
 }
 
 h2 {
@@ -53,6 +54,7 @@ li {
 a {
   font-size: clamp(0.8rem, 1vw, 1rem);
   font-family: $font-headings;
+  text-transform: uppercase;
   font-weight: 500;
   text-decoration: none;
 }
