@@ -23,7 +23,9 @@ retreatsSnapshot.forEach((retreatSnap) => {
     retreatSnap.data().arabicTitle,
     retreatSnap.data().location,
     retreatSnap.data().price,
-    retreatSnap.data().description
+    retreatSnap.data().description,
+    retreatSnap.data().aboutRetreat,
+    retreatSnap.data().date
   );
 
   getDownloadURL(ref(storage, `${retreatSnap.id}/header.jpg`)).then((url) => {

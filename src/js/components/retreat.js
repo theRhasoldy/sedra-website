@@ -45,7 +45,7 @@ src=${headerImage}
     <div class="card-content">
       <div class="retreat-details">
         <p>${this.location}</p>
-        <p>${this.price}</p>
+        <p>${this.date}</p>
       </div>
       <p>${this.description}</p>
 <a href="/pages/booking.html?retreat=${this.#retreatId}" class="btn-main">

@@ -68,7 +68,9 @@
 
 .retreat-card {
   transition: transform 0.5s ease-in-out;
+  min-width: 22vw;
   width: 100%;
+  min-height: 46vh;
   height: fit-content;
   background-color: $surface-color;
 
@@ -155,7 +157,7 @@
     background-color: $surface-color;
     position: absolute;
     height: 100%;
-    width: 100%;
+    width: fit-content;
     transition: transform 0.5s ease-in-out;
     transform: perspective(600px) rotateY(180deg);
   }
