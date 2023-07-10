@@ -1,6 +1,7 @@
 @use "../abstracts" as *;
 
 .btn-main {
+  padding-top: 1rem;
   display: flex;
   align-items: center;
   color: $highlight-color;
@@ -40,9 +41,10 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 0.15rem solid $highlight-color;
-  padding: 1rem 2rem;
-  color: $highlight-color;
+  background-image: url("/svg/button-light.svg");
+  width: 243px;
+  padding: 0.75rem;
+  color: $dominant-color;
   text-align: center;
 }
 
