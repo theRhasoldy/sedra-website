@@ -192,6 +192,7 @@
 }
 
 .frame {
+  aspect-ratio: 13/9;
   border: 30px solid;
   border-image-source: url("/img/pattern.png");
   border-image-slice: 230; /* Adjust the slice value based on your image and desired border width */
