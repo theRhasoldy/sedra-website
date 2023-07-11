@@ -20,6 +20,8 @@ navbarList.addEventListener("click", () => {
 
 var prevScrollpos = window.pageYOffset;
 
+document.querySelector("nav").style.top = "0";
+
 window.onscroll = function () {
   var currentScrollPos = window.pageYOffset;
   if (prevScrollpos > currentScrollPos) {

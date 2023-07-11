@@ -14,7 +14,8 @@ h1 {
 h2,
 h3 {
   // display: flex;
-  font-family: $font-abeezee;
+  font-family: $font-headings;
+  text-transform: uppercase;
   font-weight: 500;
 }
 

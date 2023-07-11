@@ -4,22 +4,16 @@ footer {
   nav {
     width: initial;
   }
+  :first-child p {
+    padding: 0;
+  }
   .links {
     display: flex;
-    align-items: center;
-    flex-direction: column-reverse;
+    justify-content: space-between;
+    align-items: self-end;
     ul li {
-      text-align: center;
-    }
-  }
-  @media only screen and (min-width: 1200px) {
-    .links {
-      display: flex;
-      flex-direction: initial;
-      justify-content: space-between;
-      ul li {
-        text-align: end;
-      }
+      padding-bottom: 0;
+      text-align: end;
     }
   }
 }
