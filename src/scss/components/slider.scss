@@ -37,19 +37,15 @@
     display: none;
   }
 
-  scroll-snap-type: x mandatory;
-
   & img {
     margin-inline: 1.5rem;
     max-width: 95vw;
     height: 76vh;
-    scroll-snap-align: center;
   }
 
   @media only screen and (min-width: 1200px) {
     & img {
       width: 25%;
-      scroll-snap-align: inherit;
       max-height: 70vh;
     }
   }
