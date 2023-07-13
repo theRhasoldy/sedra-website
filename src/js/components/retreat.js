@@ -2,6 +2,7 @@ export class Retreat {
   #retreatId;
   #retreatCard;
   #inclusionItem;
+  #exclusionItem;
   #packageCard;
   #packageOption;
   #itineraryCard;
@@ -17,6 +18,7 @@ export class Retreat {
     date,
     group,
     inclusions = [],
+    exclusions = [],
     packages = [],
     itineraries = []
   ) {
@@ -30,6 +32,7 @@ export class Retreat {
     this.group = group;
     this.aboutRetreat = aboutRetreat;
     this.inclusions = inclusions;
+    this.exclusions = exclusions;
     this.packages = packages;
     this.itineraries = itineraries;
   }
@@ -74,15 +77,28 @@ src=${headerImage}
       this.#inclusionItem = `
         <li>
           <div>
-            <img id="pickup" width="64px" height="auto" src="/svg/${
-              inclusion.included ? "book-icon.svg" : "unavaliable.svg"
-            }" alt="">
-              ${inclusion.name}
+            <img id="pickup" width="22px" height="auto" src="/svg/include.svg" alt="">
+						${inclusion.name}
           </div>
-          <p>${inclusion.note}</p>
+          <p>${inclusion.note || ""}</p>
         </li>`;
       inclusionsContainer.insertAdjacentHTML("afterbegin", this.#inclusionItem);
       return this.#inclusionItem;
+    });
+  }
+
+  createExclusions(exclusionsContainer) {
+    this.exclusions.forEach((exclusion) => {
+      this.#exclusionItem = `
+        <li>
+          <div>
+            <img id="pickup" width="22px" height="auto" src="/svg/exclude.svg" alt="">
+						${exclusion.name}
+          </div>
+          <p>${exclusion.note || ""}</p>
+        </li>`;
+      exclusionsContainer.insertAdjacentHTML("afterbegin", this.#exclusionItem);
+      return this.#exclusionItem;
     });
   }
 

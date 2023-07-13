@@ -88,6 +88,18 @@ inclusionSnapshots.forEach((inclusionSnap) => {
 const inclusionsContainer = bookingPage.querySelector("#inclusions");
 retreat.createInclusions(inclusionsContainer);
 
+// Get exclusions and add it to retreat object
+const exclusionsQuery = query(
+  collection(db, "retreats", retreatURL, "exclusions")
+);
+const exclusionSnapshots = await getDocs(exclusionsQuery);
+
+exclusionSnapshots.forEach((exclusionSnap) => {
+  retreat.exclusions.push(exclusionSnap.data());
+});
+const exclusionsContainer = bookingPage.querySelector("#exclusions");
+retreat.createExclusions(exclusionsContainer);
+
 // Get packages and add it to retreat object
 const packagesQuery = query(collection(db, "retreats", retreatURL, "packages"));
 const packageSnapshots = await getDocs(packagesQuery);

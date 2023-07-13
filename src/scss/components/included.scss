@@ -1,11 +1,12 @@
 @use "../abstracts/colors" as *;
 
-#inclusions {
+#inclusions,
+#exclusions {
   li {
     padding-bottom: 0.5rem;
     display: block;
     list-style: none;
-    border-bottom: 0.1rem solid $compliment-color;
+    border-bottom: 0.1rem solid #8c8378;
     @media only screen and (min-width: 1200px) {
       display: flex;
       align-items: center;
@@ -14,6 +15,9 @@
     div {
       display: flex;
       align-items: center;
+      img {
+        margin-right: 1rem;
+      }
     }
   }
   p {
