@@ -138,11 +138,7 @@ src=${headerImage}
             <img src="/img/kaaba.jpg" alt="">
             <h3>${itinerary.name}</h3>
           </div>
-        </article>
-              </p>
-            </div>
-          </article>
-        </li>`;
+          </article>`;
 
       itineraryContainer.insertAdjacentHTML("beforeend", this.#itineraryCard);
       return this.#itineraryCard;

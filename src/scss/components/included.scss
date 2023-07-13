@@ -2,6 +2,7 @@
 
 #inclusions {
   li {
+    padding-bottom: 0.5rem;
     display: block;
     list-style: none;
     border-bottom: 0.1rem solid $compliment-color;
@@ -16,6 +17,6 @@
     }
   }
   p {
-    padding-block: 1rem;
+    padding-block: 0.5rem;
   }
 }

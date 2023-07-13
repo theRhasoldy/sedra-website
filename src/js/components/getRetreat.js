@@ -98,23 +98,23 @@ packageSnapshots.forEach((packageSnap) => {
 
 const packagesContainer = bookingPage.querySelector("#packages");
 const packagesSelect = bookingPage.querySelector("#select-package");
-const bookButton = bookingPage.querySelector("#book-package");
+// const bookButton = bookingPage.querySelector("#book-package");
 
 retreat.createPackage(packagesContainer);
-retreat.createPackageOption(packagesSelect);
+// retreat.createPackageOption(packagesSelect);
 
-const cardBookButtons = bookingPage.querySelectorAll(".card-book");
+/* const cardBookButtons = bookingPage.querySelectorAll(".card-book");
 
 //Get package name from clicking on buttons
-bookButton.addEventListener("click", () => {
+bookButton?.addEventListener("click", () => {
   console.log(packagesSelect.value);
 });
 
-cardBookButtons.forEach((button) => {
+cardBookButtons?.forEach((button) => {
   button.addEventListener("click", () => {
     console.log(button.dataset.package);
   });
-});
+}); */
 
 // Get itinerary and add it to retreat object
 const itineraryQuery = query(
