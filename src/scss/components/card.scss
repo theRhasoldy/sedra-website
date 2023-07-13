@@ -131,10 +131,9 @@
   flex: none;
   width: 43ch;
   padding: 0;
-  margin-inline: 1.5rem;
   transition: transform 0.5s ease-in-out;
   position: relative;
-  height: 60vh;
+  height: 100%;
   & h3 {
     padding: 1rem;
     background-color: $surface-color;
@@ -158,7 +157,7 @@
     padding: 1rem;
     background-color: $surface-color;
     position: absolute;
-    height: 100%;
+    height: 70vh;
     width: fit-content;
     transition: transform 0.5s ease-in-out;
     transform: perspective(600px) rotateY(180deg);
