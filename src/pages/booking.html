@@ -40,7 +40,7 @@
     </aside>
 
     <header id="hero">
-      <div class="slider-container">
+      <div class="slider-container slider-container--short">
         <div class="slider">
           <img
             id="booking-header-image"
@@ -102,13 +102,13 @@
     </section>
 
     <section class="block-padded inline-padded">
-      <h2 class="center-title">What's Included</h2>
-      <ul id="inclusions" class="block-padded"></ul>
+      <h2 class="center-title">Available Packages</h2>
+      <ul id="packages" class="block-padded grid-4-col"></ul>
     </section>
 
     <section class="block-padded inline-padded">
-      <h2 class="center-title">Available Packages</h2>
-      <ul id="packages" class="block-padded grid-4-col"></ul>
+      <h2 class="center-title">What's Included</h2>
+      <ul id="inclusions" class="block-padded"></ul>
     </section>
 
     <section class="block-padded">
@@ -132,7 +132,14 @@
       />
       <div class="paper-background">
         <h2 class="inline-padded center-title">Pictures From This Retreat</h2>
-        <div class="gallery-carousel" id="gallery-carousel"></div>
+				<p class="center-title">
+					Drag to Scroll
+					<span class="indicator">
+						<img src="/svg/circle.svg" alt="" />
+						<img src="/svg/track.svg" alt="" />
+					</span>
+				</p>
+				<div class="gallery-carousel" id="gallery-carousel"></div>
       </div>
       <img
         width="100%"
@@ -214,42 +221,28 @@
     <script src="https://cdn.wetravel.com/widgets/embed_checkout.js"></script>
 
     <footer class="black-background inline-padded block-padded">
-      <div>
-        <h2 class="center-title block-padded">Get Closer To Us</h2>
-        <div class="social-list">
-          <ul class="narrow-gap">
-            <li>
-              <a href=""
-                ><img height="auto" src="/svg/instagram.svg" alt="" />
-                @sedratravel
-              </a>
-            </li>
-            <li>
-              <a href=""
-                ><img height="auto" src="/svg/facebook.svg" alt="" />
-                sedratravel
-              </a>
-            </li>
-            <li>
-              <a href=""
-                ><img height="auto" src="/svg/phone.svg" alt="" />
-                +1 (626) 353-4268
-              </a>
-            </li>
-            <li>
-              <a href=""
-                ><img height="auto" src="/svg/email.svg" alt="" />
-                info@sedra.com
-              </a>
-            </li>
-          </ul>
-        </div>
-      </div>
-      <div class="links block-padded">
-        <div>
-          <p class="hero-paragraph">Based in the United States</p>
-          <p>&copy; 2023 All rights reserved</p>
-        </div>
+			<h2 class="center-title block-padded">Get Closer To Us</h2>
+      <div class="grid-2-col">
+				<div>
+					<div class="block-padded footer-center">
+						<p class="hero-paragraph">Based in the United States</p>
+						<a>info@sedra.com<a/>
+							<a href="">+1 (626) 353-4268</a>
+					</div>
+					<div class="block-padded footer-center social-list">
+						<ul class="narrow-gap">
+							<li>
+								<a href=""
+								><img height="auto" src="/svg/instagram.svg" alt=""/></a>
+							</li>
+							<li>
+								<a href=""
+								><img height="auto" src="/svg/facebook.svg" alt=""/></a>
+							</li>
+						</ul>
+					</div>
+				</div>
+      <div class="links footer-center">
         <nav class="footer-links">
           <ul>
             <li><a href="/">Home</a></li>
@@ -258,7 +251,9 @@
             <li><a href="/#values">About</a></li>
           </ul>
         </nav>
+				<p class="center-title">&copy;2023 All rights reserved</p>
       </div>
+			</div>
     </footer>
   </body>
 </html>

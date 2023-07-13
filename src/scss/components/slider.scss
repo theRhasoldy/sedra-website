@@ -6,6 +6,13 @@
   align-items: end;
 }
 
+.slider-container--short {
+  height: 50vh;
+  .slider img {
+    object-position: top;
+  }
+}
+
 .slider {
   display: flex;
   transition: transform 1.5s ease-in-out;
