@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Welcome to Sedra</title>
+    <script defer type="module" src="/js/components/gallery.js"></script>
+  </head>
+
+  <body>
+    <div class="noise-overlay"></div>
+    <nav>
+      <div class="navbar inline-padded">
+        <ul>
+          <li><a href="/">SEDRA</a></li>
+          <li>
+            <button id="btn-expand" type="menu">
+              <img src="/svg/menu.svg" alt="Expand icon for menu" />
+            </button>
+          </li>
+          <div class="navbar-list">
+            <li><a href="#retreats">Retreats</a></li>
+            <li><a href="#gallery">Gallery</a></li>
+            <li><a href="#values">About</a></li>
+            <li>
+              <a href=""><div id="btn-schedule"><span>Schedule a Call</span></div></a>
+            </li>
+          </div>
+        </ul>
+      </div>
+    </nav>
+
+    <header id="hero">
+      <div class="slider-container">
+        <div class="slider">
+          <img
+            class="hero-images"
+            src="/img/kaaba.jpg"
+            alt="picture of the kaaba"
+          />
+        </div>
+        <img class="overlay align-bottom" src="/img/cloud-top.png" alt="">
+      </div>
+
+      <div class="header-grid inline-padded block-padded center-title">
+        <h1>Relive Our Experiences</h1>
+      </div>
+    </header>
+
+    <section id="gallery" class="paper-background inline-padded">
+      <h2 class="center-title block-padded">Photos From Previous Retreats</h2>
+      <div id="gallery-carousel" class="block-padded free-grid"></div>
+    </section>
+
+    <img class="black-background" src="/img/cloud-bottom.png" alt="">
+
+    <footer class="black-background inline-padded block-padded">
+			<h2 class="center-title block-padded">Get Closer To Us</h2>
+      <div class="grid-2-col">
+				<div>
+					<div class="block-padded footer-center">
+						<p class="hero-paragraph">Based in the United States</p>
+						<a>info@sedra.com<a/>
+							<a href="">+1 (626) 353-4268</a>
+					</div>
+					<div class="block-padded footer-center social-list">
+						<ul class="narrow-gap">
+							<li>
+								<a href=""
+								><img height="auto" src="/svg/instagram.svg" alt=""/></a>
+							</li>
+							<li>
+								<a href=""
+								><img height="auto" src="/svg/facebook.svg" alt=""/></a>
+							</li>
+						</ul>
+					</div>
+				</div>
+      <div class="links footer-center">
+        <nav class="footer-links">
+          <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/#retreats">Retreats</a></li>
+            <li><a href="/#gallery">Gallery</a></li>
+            <li><a href="/#values">About</a></li>
+          </ul>
+        </nav>
+				<p class="center-title">&copy;2023 All rights reserved</p>
+      </div>
+			</div>
+    </footer>
+  </body>
+</html>
