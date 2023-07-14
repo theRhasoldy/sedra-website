@@ -80,12 +80,14 @@ src=${headerImage}
             <img id="pickup" width="22px" height="auto" src="/svg/include.svg" alt="">
 						${inclusion.name}
           </div>
-          <p>${inclusion.note || ""}</p>
+          ${inclusion.note ? `<p>${inclusion.note}</p>` : ""}
         </li>`;
       inclusionsContainer.insertAdjacentHTML("afterbegin", this.#inclusionItem);
       return this.#inclusionItem;
     });
   }
+
+  // <p>${exclusion.note || ""}</p>
 
   createExclusions(exclusionsContainer) {
     this.exclusions.forEach((exclusion) => {
@@ -95,7 +97,7 @@ src=${headerImage}
             <img id="pickup" width="22px" height="auto" src="/svg/exclude.svg" alt="">
 						${exclusion.name}
           </div>
-          <p>${exclusion.note || ""}</p>
+          ${exclusion.note ? `<p>${exclusion.note}</p>` : ""}
         </li>`;
       exclusionsContainer.insertAdjacentHTML("afterbegin", this.#exclusionItem);
       return this.#exclusionItem;

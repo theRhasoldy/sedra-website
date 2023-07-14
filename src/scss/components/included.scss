@@ -3,16 +3,16 @@
 #inclusions,
 #exclusions {
   li {
-    padding-bottom: 0.5rem;
+    padding-block: 0.5rem;
     display: block;
     list-style: none;
-    border-bottom: 0.1rem solid #8c8378;
     @media only screen and (min-width: 1200px) {
       display: flex;
       align-items: center;
       justify-content: space-between;
     }
     div {
+      padding-block: 0.5rem;
       display: flex;
       align-items: center;
       img {
@@ -23,4 +23,12 @@
   p {
     padding-block: 0.5rem;
   }
+}
+
+#inclusions li:not(:last-child) {
+  border-bottom: 0.1rem solid $highlight-color;
+}
+
+#exclusions li:not(:last-child) {
+  border-bottom: 0.1rem solid #8c8378;
 }

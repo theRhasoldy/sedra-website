@@ -8,7 +8,8 @@
 .block-padded {
   padding-block: 1rem;
 }
-containerscontainers .more-inline {
+
+.more-inline {
   @media only screen and (min-width: 1200px) {
     padding-inline: 25vw;
   }
@@ -85,6 +86,9 @@ containerscontainers .more-inline {
 .grid-4-col {
   display: flex;
   flex-direction: column;
+  li {
+    padding-block: 1rem;
+  }
   @media only screen and (min-width: 768px) {
     display: grid;
     grid-template-columns: repeat(2, auto);
