@@ -108,6 +108,11 @@
   p {
     padding: 0;
   }
+  & div {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+  }
 }
 
 .center-title {
