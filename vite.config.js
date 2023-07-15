@@ -13,6 +13,7 @@ export default defineConfig({
         index: fileURLToPath(new URL("/index.html", import.meta.url)),
         booking: fileURLToPath(new URL("/pages/booking.html", import.meta.url)),
         gallery: fileURLToPath(new URL("/pages/gallery.html", import.meta.url)),
+        about: fileURLToPath(new URL("/pages/about.html", import.meta.url)),
         allRetreats: fileURLToPath(
           new URL("/pages/allRetreats.html", import.meta.url)
         ),
