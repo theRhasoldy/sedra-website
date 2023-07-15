@@ -34,11 +34,11 @@
   gap: 1.5rem;
   margin: 0 auto;
   width: 100%;
-  padding-bottom: 3rem;
+  // padding-bottom: 3rem;
   cursor: grab;
   display: flex;
   overflow-x: scroll;
-  overflow-y: visible;
+  overflow-y: hidden;
 
   scrollbar-width: none;
   -ms-overflow-style: none;

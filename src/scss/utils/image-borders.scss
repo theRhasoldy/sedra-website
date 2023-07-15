@@ -7,3 +7,17 @@
   height: auto;
   aspect-ratio: 1/1;
 }
+
+.landscape {
+  margin-bottom: 1rem;
+  aspect-ratio: 13/9;
+  border: 30px solid;
+  border-image-source: url("/img/pattern.png");
+  border-image-slice: 230; /* Adjust the slice value based on your image and desired border width */
+  border-image-width: 30px; /* Adjust the width to match the desired border width */
+  border-image-repeat: revert; /* Adjust the repeat style as needed */
+  @media only screen and (min-width: 768px) {
+    aspect-ratio: 20/9;
+    border-image-width: 50px; /* Adjust the width to match the desired border width */
+  }
+}

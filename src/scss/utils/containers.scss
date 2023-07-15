@@ -66,6 +66,17 @@
   }
 }
 
+.grid-sep {
+  display: flex;
+  flex-direction: column;
+  @media only screen and (min-width: 1200px) {
+    display: grid;
+    grid-template-columns: auto 2% auto;
+    column-gap: 4rem;
+    align-content: space-between;
+  }
+}
+
 .grid-3-col {
   display: flex;
   flex-direction: column;
@@ -115,7 +126,6 @@
   justify-content: center;
   flex-direction: column;
   flex-wrap: wrap;
-  gap: 2rem;
   img {
     vertical-align: middle;
     width: initial;
