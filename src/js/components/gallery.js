@@ -2,6 +2,7 @@ import "/scss/main.scss";
 import { app } from "../firebase.js";
 import { getStorage, listAll, ref, getDownloadURL } from "firebase/storage";
 import { createImageCard } from "./createImageCards.js";
+import "./navbar.js";
 
 const storage = getStorage();
 const listRef = ref(storage, "previousRetreats");
