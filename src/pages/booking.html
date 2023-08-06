@@ -1,252 +1,206 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <title></title>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <script defer type="module" src="/js/components/getRetreat.js"></script>
-  </head>
 
-  <body class="sand-background booking-page">
-    <div class="noise-overlay"></div>
-    <nav>
-      <div class="navbar inline-padded">
-        <ul>
-          <li><a href="/">SEDRA</a></li>
-          <li>
-            <button id="btn-expand" type="menu">
-              <img src="/svg/menu.svg" alt="Expand icon for menu" />
-            </button>
-          </li>
-          <div class="navbar-list">
-            <li><a href="/pages/allRetreats.html">Retreats</a></li>
-            <li><a href="/pages/gallery.html">Gallery</a></li>
-            <li><a href="/pages/about.html">About</a></li>
-            <li>
-              <a href=""
-                ><div id="btn-schedule"><span>Schedule a Call</span></div></a
-              >
-            </li>
-          </div>
-        </ul>
-      </div>
-    </nav>
+<head>
+	<title>Book a retreat</title>
+	<meta name="description" content="Explore a new destination with Sedra">
+	<meta name="keywords"
+		content="Retreats, Travel, Hajj, Umrah, Egypt, Luxor, Aswan, Sharm, Leisure, Explore, Sea, Sand, Arabic, Islamic, Islam">
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<script defer type="module" src="/js/components/getRetreat.js"></script>
+</head>
 
-    <header id="hero">
-      <div class="slider-container slider-container--short">
-        <div class="slider">
-          <img
-            id="booking-header-image"
-            class="hero-images"
-            src="/img/kaaba.jpg"
-            alt="picture of the kaaba"
-          />
-        </div>
-        <img
-          class="overlay align-bottom"
-          src="/img/sand-separator.png"
-          alt=""
-        />
-      </div>
-
-      <div>
-        <img
-          style="position: absolute; z-index: -100;"
-          src="/img/sand-background.png"
-          alt=""
-        />
+<body class="sand-background booking-page">
+	<div class="noise-overlay"></div>
+	<nav>
+		<div class="navbar inline-padded">
+			<ul>
+				<li><a href="/">SEDRA</a></li>
+				<li>
+					<button id="btn-expand" type="menu">
+						<img src="/svg/menu.svg" alt="Expand icon for menu" />
+					</button>
+				</li>
+				<div class="navbar-list">
+					<li><a href="/pages/allRetreats.html">Retreats</a></li>
+					<li><a href="/pages/gallery.html">Gallery</a></li>
+					<li><a href="/pages/about.html">About</a></li>
+					<li>
+						<a href="">
+							<div id="btn-schedule"><span>Schedule a Call</span></div>
+						</a>
+					</li>
 				</div>
-        <div class="block-padded inline-padded">
-          <h1 id="booking-description" class="center-title block-padded shifted-h1">
-            explore the world, create lasting <b>memories</b>.
-          </h1>
-				<div class="details-container">
-					<div>
-						<img src="/svg/location.svg" alt=""/>
-						<p id="location">
-							Sharm Al Sheikh
-						</p>
-					</div>
-					<div>
-						<img src="/svg/date.svg" alt=""/>
-						<p id="date">Jun 19 - 26, 2023</p>
-					</div>
-					<div>
-						<img src="/svg/group.svg" alt=""/>
-						<p id="group">Group size: 1 - 12</p>
-					</div>
-				</div>
+			</ul>
+		</div>
+	</nav>
+
+	<header id="hero">
+		<div class="slider-container slider-container--short">
+			<div class="slider">
+				<img id="booking-header-image" class="hero-images" src="" alt="Picture from the retreat" />
 			</div>
-    </header>
+			<img class="overlay align-bottom" src="/img/sand-separator.png" aria-hidden="true"
+				alt="Top of sand separating sections" />
+		</div>
 
-    <section class="inline-padded">
-      <h2 class="center-title">About This trip</h2>
-      <p id="booking-details">
-        We're delighted to host Ustadha Iffet Rafeeq in Jamaica! Throughout the
-        week, she will be teaching her course 'The Seasons WIthin' helping women
-        understand and master their menstrual cycle, sensuality and sexuality
-        through an Islamic lens. <br /><br />
-        We’ll visit Kingston Central Masjid mosque, pray in peace, remember
-        Allah, and enjoy an exquisite eight-course farm-to-table meal at Stush
-        in the Bush organic farm. You’ll also have the opportunity to take in
-        Jamaica’s unspoiled nature and swim in breathtaking waterfalls, beaches,
-        and lagoons. We’ll hike up the famous Blue Mountains, where we’ll visit
-        one of the island’s oldest Rasta communities and dissolve all ignorant
-        misconceptions about the island and its proud people.<br /><br />
-        This won’t be about all-day tanning, beachside braids, and gift shop
-        Rasta hats (not that there’s anything wrong with that); we just want to
-        rejuvenate you in a different way. After all, we travel not to escape
-        life, but for life not to escape us, right? We want to share the glory,
-        struggles, and beauty of this island- a BEAST of an island, as you will
-        find out!<br /><br />
-        Please note that guest speakers can change due to unexpected
-        circumstances. Burgundy Roots will guarantee optimum quality for its
-        guest speakers. We ask for your flexibility and understanding.
-      </p>
-    </section>
-
-    <section class="inline-padded">
-      <h2 class="center-title">Available Packages</h2>
-      <ul id="packages" class="grid-4-col"></ul>
-    </section>
-
-    <section class="inline-padded">
-      <h2 class="block-padded center-title">What's Included</h2>
-      <ul id="inclusions"></ul>
-    </section>
-
-    <section class="inline-padded">
-      <h2 class="block-padded center-title">What's Excluded</h2>
-      <ul id="exclusions"></ul>
-    </section>
-
-    <section class="block-padded">
-      <h2 class="center-title">Itinerary</h2>
-      <p class="center-title">
-        Tap on card to show details or drag To scroll
-        <span class="indicator">
-          <img src="/svg/circle.svg" alt="" />
-          <img src="/svg/track.svg" alt="" />
-        </span>
-      </p>
-      <div id="itinerary" class="gallery-carousel"></div>
-    </section>
-
-    <section id="gallery" class="block-padded">
-      <img
-        width="100%"
-        loading="lazy"
-        src="/img/cloud-top.png"
-        alt="old radio"
-      />
-      <div class="block-padded paper-background">
-        <h2 class="inline-padded center-title">Photos From This Retreat</h2>
-				<p class="center-title">
-					Drag to Scroll
-					<span class="indicator">
-						<img src="/svg/circle.svg" alt="" />
-						<img src="/svg/track.svg" alt="" />
-					</span>
-				</p>
-				<div class="gallery-carousel" id="gallery-carousel"></div>
-      </div>
-      <img
-        width="100%"
-        loading="lazy"
-        src="/img/cloud-bottom.png"
-        alt="old radio"
-      />
-    </section>
-
-    <section class="block-padded inline-padded">
-      <h2 class="center-title">Terms & Conditions</h2>
-      <p>
-        Burgundy Roots prides itself in unique and curated travel experiences.
-        In order for us to fulfill our promise, we must pay our suppliers ahead
-        of time. Please note that once your deposit is processed, it cannot be
-        recuperated as our suppliers are paid upfront months ahead of time.
-        Thank you for your understanding. Please read carefully through our
-        cancellation policy and message us if you have any questions.
-      </p>
-      <h3>Deposit/payment terms</h3>
-      <p>
-        Deposits must be received within the time specified at the time of
-        booking in order to confirm your booking and avoid automatic
-        cancellation. If you are unable to attend for whatever reason, you may
-        transfer the trip to a family member or friend.
-      </p>
-      <h3>Cancellation charges</h3>
-      <p>
-        Please note that deposits and payments are non-refundable. In the event
-        of a travel ban due to COVID-19 or any other unforeseen circumstances,
-        retreat dates will be altered to a later date. No refunds will be
-        granted. Discomfort/unease with regards to travel or quarantine upon
-        return will not be considered. All payments are final and
-        non-refundable.
-      </p>
-      <h3>Final payment</h3>
-      <p>
-        Final payment is due 90 days prior to the trip. Final payments are due
-        90 days prior to the trip. Any cancelation made 90 days or more prior to
-        the trip is subject to a 50% penalty (your card will be charged another
-        25% of the retreat fee). Any cancelation made 89 days or less prior to
-        trip is subject to full payment of retreat fee.
-      </p>
-      <h3>Vaccination</h3>
-      <p>
-        It is incumbent upon each traveler to check the rules and regulations in
-        regards to vaccination demands in each country. Each traveler must
-        ensure that they meet the criteria upon entry, as no refund will be
-        granted if one does not meet the criteria. You may sell your slot or
-        send someone else on your behalf instead, however no refund nor credit
-        will be granted.
-      </p>
-    </section>
-
-    <section id="values" class="black-background">
-      <img
-        width="100%"
-        class="overlay align-bottom"
-        loading="lazy"
-        src="/img/sand-inverted.png"
-        alt="old radio"
-      />
-    </section>
-
-    <footer class="black-background inline-padded block-padded">
-			<h2 class="center-title block-padded">Get Closer To Us</h2>
-      <div class="grid-2-col">
+		<div>
+			<img style="position: absolute; z-index: -100;" src="/img/sand-background.png" aria-hidden="true"
+				alt="Second part of sand separator" />
+		</div>
+		<div class="block-padded inline-padded">
+			<h1 id="booking-description" class="center-title block-padded shifted-h1">
+				explore the world, create lasting <b>memories</b>.
+			</h1>
+			<div class="details-container">
 				<div>
-					<div class="block-padded footer-center">
-						<p class="hero-paragraph">Based in the United States</p>
-						<a>info@sedra.com<a/>
-							<a href="">+1 (626) 353-4268</a>
-					</div>
-					<div class="block-padded footer-center social-list">
-						<ul class="narrow-gap">
-							<li>
-								<a href=""
-								><img height="auto" src="/svg/instagram.svg" alt=""/></a>
-							</li>
-							<li>
-								<a href=""
-								><img height="auto" src="/svg/facebook.svg" alt=""/></a>
-							</li>
-						</ul>
-					</div>
+					<img src="/svg/location.svg" aria-hidden="true" alt="Icon of location" />
+					<p id="location"></p>
 				</div>
-      <div class="links footer-center">
-        <nav class="footer-links">
-          <ul>
-            <li><a href="/">Home</a></li>
-            <li><a href="/#retreats">Retreats</a></li>
-            <li><a href="/#gallery">Gallery</a></li>
-            <li><a href="/#values">About</a></li>
-          </ul>
-        </nav>
-				<p class="center-title">&copy;2023 All rights reserved</p>
-      </div>
+				<div>
+					<img src="/svg/date.svg" aria-hidden="true" alt="Icon of Date" />
+					<p id="date"></p>
+				</div>
+				<div>
+					<img src="/svg/group.svg" aria-hidden="true" alt="Icon of Group Size" />
+					<p id="group"></p>
+				</div>
 			</div>
-    </footer>
-  </body>
+		</div>
+	</header>
+
+	<section class="inline-padded">
+		<h2 class="center-title">About This trip</h2>
+		<p id="booking-details"></p>
+	</section>
+
+	<section class="inline-padded">
+		<h2 class="center-title">Available Packages</h2>
+		<ul id="packages" class="grid-4-col"></ul>
+	</section>
+
+	<section class="inline-padded">
+		<h2 class="block-padded center-title">What's Included</h2>
+		<ul id="inclusions"></ul>
+	</section>
+
+	<section class="inline-padded">
+		<h2 class="block-padded center-title">What's Excluded</h2>
+		<ul id="exclusions"></ul>
+	</section>
+
+	<section class="block-padded">
+		<h2 class="center-title">Itinerary</h2>
+		<p class="center-title" aria-label="Drag Indicator">
+			Tap on Card or drag to scroll
+			<span class="indicator">
+				<img src="/svg/circle.svg" aria-hidden="true" alt="Circle indicating to scroll left or right" />
+				<img src="/svg/track.svg" aria-hidden="true" alt="Track circle moves on" />
+			</span>
+		</p>
+		</p>
+		<div id="itinerary" class="gallery-carousel"></div>
+	</section>
+
+	<section id="gallery" class="block-padded">
+		<img width="100%" loading="lazy" src="/img/cloud-top.png" alt="old radio" />
+		<div class="block-padded paper-background">
+			<h2 class="inline-padded center-title">Photos From This Retreat</h2>
+			<p class="center-title" aria-label="Drag Indicator">
+				Drag to Scroll
+				<span class="indicator">
+					<img src="/svg/circle.svg" aria-hidden="true" alt="Circle indicating to scroll left or right" />
+					<img src="/svg/track.svg" aria-hidden="true" alt="Track circle moves on" />
+				</span>
+			</p>
+			<div class="gallery-carousel" id="gallery-carousel"></div>
+		</div>
+		<img width="100%" loading="lazy" src="/img/cloud-bottom.png" alt="old radio" />
+	</section>
+
+	<section class="block-padded inline-padded">
+		<h2 class="center-title">Terms & Conditions</h2>
+		<p>
+			Burgundy Roots prides itself in unique and curated travel experiences.
+			In order for us to fulfill our promise, we must pay our suppliers ahead
+			of time. Please note that once your deposit is processed, it cannot be
+			recuperated as our suppliers are paid upfront months ahead of time.
+			Thank you for your understanding. Please read carefully through our
+			cancellation policy and message us if you have any questions.
+		</p>
+		<h3>Deposit/payment terms</h3>
+		<p>
+			Deposits must be received within the time specified at the time of
+			booking in order to confirm your booking and avoid automatic
+			cancellation. If you are unable to attend for whatever reason, you may
+			transfer the trip to a family member or friend.
+		</p>
+		<h3>Cancellation charges</h3>
+		<p>
+			Please note that deposits and payments are non-refundable. In the event
+			of a travel ban due to COVID-19 or any other unforeseen circumstances,
+			retreat dates will be altered to a later date. No refunds will be
+			granted. Discomfort/unease with regards to travel or quarantine upon
+			return will not be considered. All payments are final and
+			non-refundable.
+		</p>
+		<h3>Final payment</h3>
+		<p>
+			Final payment is due 90 days prior to the trip. Final payments are due
+			90 days prior to the trip. Any cancelation made 90 days or more prior to
+			the trip is subject to a 50% penalty (your card will be charged another
+			25% of the retreat fee). Any cancelation made 89 days or less prior to
+			trip is subject to full payment of retreat fee.
+		</p>
+		<h3>Vaccination</h3>
+		<p>
+			It is incumbent upon each traveler to check the rules and regulations in
+			regards to vaccination demands in each country. Each traveler must
+			ensure that they meet the criteria upon entry, as no refund will be
+			granted if one does not meet the criteria. You may sell your slot or
+			send someone else on your behalf instead, however no refund nor credit
+			will be granted.
+		</p>
+	</section>
+
+	<section id="values" class="black-background">
+		<img width="100%" class="overlay align-bottom" loading="lazy" src="/img/sand-inverted.png" alt="old radio" />
+	</section>
+
+	<footer class="black-background inline-padded block-padded">
+		<h2 class="center-title block-padded">Get Closer To Us</h2>
+		<div class="grid-2-col">
+			<div>
+				<div class="block-padded footer-center">
+					<p class="hero-paragraph">Based in the United States</p>
+					<a>info@sedra.com<a />
+						<a href="">+1 (626) 353-4268</a>
+				</div>
+				<div class="block-padded footer-center social-list">
+					<ul class="narrow-gap">
+						<li>
+							<a href=""><img height="auto" src="/svg/instagram.svg" alt="" /></a>
+						</li>
+						<li>
+							<a href=""><img height="auto" src="/svg/facebook.svg" alt="" /></a>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="links footer-center">
+				<nav class="footer-links">
+					<ul>
+						<li><a href="/">Home</a></li>
+						<li><a href="/#retreats">Retreats</a></li>
+						<li><a href="/#gallery">Gallery</a></li>
+						<li><a href="/#values">About</a></li>
+					</ul>
+				</nav>
+				<p class="center-title">&copy;2023 All rights reserved</p>
+			</div>
+		</div>
+	</footer>
+</body>
+
 </html>

@@ -117,7 +117,7 @@ src=${headerImage}
               </div>
               <h4>Package Details</h4>
               <p>${packageItem.details}</p>
-              <button data-package="${packageItem.name}" class="card-book">
+              <button id="${packageItem.name}" class="card-book">
                 <span>Book Now</span>
                 <img
                   src="/svg/book-icon.svg"

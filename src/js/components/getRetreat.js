@@ -11,6 +11,8 @@ import {
   getDoc,
   getDocs,
   collection,
+  setDoc,
+  addDoc,
 } from "firebase/firestore";
 
 import { getStorage, listAll, ref, getDownloadURL } from "firebase/storage";
@@ -104,7 +106,7 @@ retreat.createExclusions(exclusionsContainer);
 const packagesQuery = query(collection(db, "retreats", retreatURL, "packages"));
 const packageSnapshots = await getDocs(packagesQuery);
 
-packageSnapshots.forEach((packageSnap) => {
+packageSnapshots.forEach((packageSnap, i) => {
   retreat.packages.push(packageSnap.data());
 });
 
@@ -115,18 +117,24 @@ const packagesSelect = bookingPage.querySelector("#select-package");
 retreat.createPackage(packagesContainer);
 // retreat.createPackageOption(packagesSelect);
 
-/* const cardBookButtons = bookingPage.querySelectorAll(".card-book");
+const cardBookButtons = bookingPage.querySelectorAll(".card-book");
 
-//Get package name from clicking on buttons
-bookButton?.addEventListener("click", () => {
-  console.log(packagesSelect.value);
-});
+const reservePackage = async function (packageId) {
+  await addDoc(
+    collection(db, "retreats", retreatURL, "packages", packageId, "reserves"),
+    {
+      name: "Nour El Din",
+      email: "rhasoldy@gmail.com",
+    }
+  );
+};
 
 cardBookButtons?.forEach((button) => {
   button.addEventListener("click", () => {
-    console.log(button.dataset.package);
+    console.log(button.id);
+    reservePackage(button.id);
   });
-}); */
+});
 
 // Get itinerary and add it to retreat object
 const itineraryQuery = query(

@@ -1,257 +1,236 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Welcome to Sedra</title>
-    <script defer type="module" src="/js/main.js"></script>
-  </head>
 
-  <body>
-    <div class="noise-overlay"></div>
-    <nav>
-      <div class="navbar inline-padded">
-        <ul>
-          <li><a href="/">SEDRA</a></li>
-          <li>
-            <button id="btn-expand" type="menu">
-              <img src="/svg/menu.svg" alt="Expand icon for menu" />
-            </button>
-          </li>
-          <div class="navbar-list">
-            <li><a href="/pages/allRetreats.html">Retreats</a></li>
-            <li><a href="/pages/gallery.html">Gallery</a></li>
-            <li><a href="/pages/about.html">About</a></li>
-            <li>
-              <a href=""
-                ><div id="btn-schedule"><span>Schedule a Call</span></div></a
-              >
-            </li>
-          </div>
-        </ul>
-      </div>
-    </nav>
+<head>
+	<meta charset="UTF-8" />
+	<link rel="icon" type="image/svg+xml" href="" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta name="keywords"
+		content="Retreats, Travel, Hajj, Umrah, Egypt, Luxor, Aswan, Sharm, Leisure, Explore, Sea, Sand, Arabic, Islamic, Islam">
+	<meta name="description" content="Welcome to Sedra Retreats, Your one step destination for all your travelling needs">
+	<title>Explore with Sedra</title>
+	<script defer type="module" src="/js/main.js"></script>
+</head>
 
-    <header id="hero">
-      <div class="slider-container">
-        <div class="slider">
-          <img
-            class="hero-images"
-            src="/img/kaaba.jpg"
-            alt="picture of the kaaba"
-          />
-          <img
-            class="hero-images"
-            src="/img/luxor.jpg"
-            alt="picture of the kaaba"
-          />
-          <img
-            class="hero-images"
-            src="/img/sharm.jpg"
-            alt="picture of the kaaba"
-          />
-        </div>
-        <img class="overlay align-bottom" src="/img/cloud-top.png" alt="" />
-      </div>
-
-      <div class="header-grid inline-padded">
-        <div>
-          <h1>Explore the world,</h1>
-          <h1>create lasting <b>memories</b>.</h1>
-        </div>
-        <a href="#retreats" class="btn-main">
-          <img
-            width="64px"
-            src="/svg/hero-button.svg"
-            alt="indicator of explore more"
-          />
-          <span>Surprise Me</span>
-        </a>
-      </div>
-      <img class="black-background" src="/img/cloud-bottom.png" alt="" />
-    </header>
-
-    <section id="retreats" class="black-background inline-padded block-padded">
-      <h2 class="center-title block-padded">Upcoming Retreats</h2>
-      <p class="center-title more-inline">
-        We invite you to experience more than just a simple escape with us. As
-        we like to say here at Burgundy Roots, come and travel with heart open
-        and spirit ready! Check our collection of unique retreats infused with
-        the Sedra Travel.
-      </p>
-      <ul id="retreats-cards" class="grid-4-col"></ul>
-      <div class="more-div">
-        <a href="/pages/allRetreats.html" class="btn-more">
-          See All Retreats
-        </a>
-      </div>
-    </section>
-
-    <section class="black-background">
-      <img
-        width="100%"
-        class="overlay align-bottom"
-        loading="lazy"
-        src="/img/sand.png"
-        alt="old radio"
-      />
-    </section>
-
-    <section id="gallery" class="sand-background block-padded">
-      <h2 class="inline-padded center-title">Photos From Our Retreats</h2>
-      <p class="center-title">
-        Drag to Scroll
-        <span class="indicator">
-          <img src="/svg/circle.svg" alt="" />
-          <img src="/svg/track.svg" alt="" />
-        </span>
-      </p>
-      <div id="gallery-carousel" class="gallery-carousel"></div>
-      <div class="more-div">
-        <a href="/pages/gallery.html" class="btn-more btn-more-dark">
-          See More Photos
-        </a>
-      </div>
-    </section>
-
-    <section id="values">
-      <img
-        width="100%"
-        class="overlay align-bottom"
-        loading="lazy"
-        src="/img/sand-inverted.png"
-        alt="old radio"
-      />
-    </section>
-
-    <section id="services" class="inline-padded">
-      <h2 class="block-padded center-title">Why Sedra Travel</h2>
-      <div class="grid-sep">
-        <div class="grid-3-row">
-          <article>
-            <h3>Authentic</h3>
-            <p>
-              If you want to experience a different Jamaica, a rural, slow place
-              that doesn’t exist to cater to tourists and operates by its own
-              rhythms, then journey with us.
-            </p>
-          </article>
-          <img class="frame" src="/img/group1.jpg" alt="" />
-          <article>
-            <h3>Intimate</h3>
-            <p>
-              We keep our retreats intimate by interviewing every attendee prior
-              to the retreat. We enjoy getting to know our prospective guests
-              and want to ensure we are the right fit for what they are looking
-              for. If you're looking for a custom, private or corporate retreat,
-              we are happy to facilitate it.
-            </p>
-          </article>
-        </div>
-
-        <div class="vr"></div>
-
-        <div class="grid-3-row">
-          <img class="frame" src="/img/group2.jpg" alt="" />
-          <article>
-            <h3>Local</h3>
-            <p>
-              Support local businesses by visiting various communities and
-              organic farms. Take in Jamaica’s rich history and culture by
-              embracing the island’s rhythm.
-            </p>
-          </article>
-          <img class="frame" src="/img/group3.jpg" alt="" />
-        </div>
-      </div>
-
-      <div class="block-padded more-div">
-        <a href="/pages/about.html" class="btn-more btn-more-dark"> Learn More </a>
-      </div>
-    </section>
-
-    <img class="black-background" src="/img/cloud-bottom.png" alt="" />
-
-    <section id="testimonial" class="black-background inline-padded">
-      <h2 class="center-title block-padded">Our Travelers Words</h2>
-      <div class="grid-3-col">
-        <figure class="block-padded quote">
-          <blockquote>
-            “I had an incredible experience booking my vacation through XYZ
-            Travel Agency. Their attention to detail and personalized service
-            made all the difference. From the moment I contacted them, their
-            team was responsive and knowledgeable, helping me find the perfect
-            destination and accommodations that suited my preferences.”
-          </blockquote>
-          <figcaption>
-            <cite>Sarah H.</cite> <br />
-            <cite class="sub-cite">Hajj, <date>3 July 2022</date></cite>
-          </figcaption>
-        </figure>
-        <figure class="quote">
-          <blockquote>
-            “I had an incredible experience booking my vacation through XYZ
-            Travel Agency. Their attention to detail and personalized service
-            made all the difference. From the moment I contacted them, their
-            team was responsive and knowledgeable, helping me find the perfect
-            destination and accommodations that suited my preferences.”
-          </blockquote>
-          <figcaption>
-            <cite>Sarah H.</cite> <br />
-            <cite class="sub-cite">Hajj, <date>3 July 2022</date></cite>
-          </figcaption>
-        </figure>
-        <figure class="quote">
-          <blockquote>
-            “I had an incredible experience booking my vacation through XYZ
-            Travel Agency. Their attention to detail and personalized service
-            made all the difference. From the moment I contacted them, their
-            team was responsive and knowledgeable, helping me find the perfect
-            destination and accommodations that suited my preferences.”
-          </blockquote>
-          <figcaption>
-            <cite>Sarah H.</cite> <br />
-            <cite class="sub-cite">Hajj, <date>3 July 2022</date></cite>
-          </figcaption>
-        </figure>
-      </div>
-    </section>
-
-    <footer class="black-background inline-padded block-padded">
-			<h2 class="center-title block-padded">Get Closer To Us</h2>
-      <div class="grid-2-col">
-				<div>
-					<div class="block-padded footer-center">
-						<p class="hero-paragraph">Based in the United States</p>
-						<a>info@sedra.com<a/>
-							<a href="">+1 (626) 353-4268</a>
-					</div>
-					<div class="block-padded footer-center social-list">
-						<ul class="narrow-gap">
-							<li>
-								<a href=""
-								><img height="auto" src="/svg/instagram.svg" alt=""/></a>
-							</li>
-							<li>
-								<a href=""
-								><img height="auto" src="/svg/facebook.svg" alt=""/></a>
-							</li>
-						</ul>
-					</div>
+<body>
+	<div class="noise-overlay"></div>
+	<nav>
+		<div class="navbar inline-padded">
+			<ul>
+				<li><a href="/">SEDRA</a></li>
+				<li>
+					<button id="btn-expand" type="menu">
+						<img src="/svg/menu.svg" alt="Expand icon for menu" />
+					</button>
+				</li>
+				<div class="navbar-list">
+					<li><a href="/pages/allRetreats.html">Retreats</a></li>
+					<li><a href="/pages/gallery.html">Gallery</a></li>
+					<li><a href="/pages/about.html">About</a></li>
+					<li>
+						<a href="">
+							<div id="btn-schedule"><span>Schedule a Call</span></div>
+						</a>
+					</li>
 				</div>
-      <div class="links footer-center">
-        <nav class="footer-links">
-          <ul>
-            <li><a href="/">Home</a></li>
-            <li><a href="/#retreats">Retreats</a></li>
-            <li><a href="/#gallery">Gallery</a></li>
-            <li><a href="/#values">About</a></li>
-          </ul>
-        </nav>
-				<p class="center-title">&copy;2023 All rights reserved</p>
-      </div>
+			</ul>
+		</div>
+	</nav>
+
+	<header id="hero">
+		<div class="slider-container">
+			<div class="slider">
+				<img class="hero-images" src="/img/kaaba.jpg" alt="Picture of the kaaba in the center of the frame" />
+				<img class="hero-images" src="/img/luxor.jpg" alt="Picture of one of luxor's ancient relics" />
+				<img class="hero-images" src="/img/sharm.jpg" alt="Picture of one of the blue beaches of Sharm Al Shaikh" />
 			</div>
-    </footer>
-  </body>
+			<img class="overlay align-bottom" aria-hidden="true" src="/img/cloud-top.png"
+				alt="Top of the cloud separating sections" />
+		</div>
+
+		<div class="header-grid inline-padded">
+			<div>
+				<h1>Explore the world,</h1>
+				<h1>create lasting <b>memories</b>.</h1>
+			</div>
+			<a href="#retreats" class="btn-main">
+				<img width="64px" src="/svg/hero-button.svg" alt="indicator of explore more" />
+				<span>Surprise Me</span>
+			</a>
+		</div>
+		<img class="black-background" src="/img/cloud-bottom.png" aria-hidden="true"
+			alt="Bottom of the cloud separating sections" />
+	</header>
+
+	<section id="retreats" class="black-background inline-padded block-padded">
+		<h2 class="center-title block-padded">Upcoming Retreats</h2>
+		<p class="center-title more-inline">
+			Discover your haven of peace and serenity as we invite you to explore our handpicked retreats.
+			Immerse yourself in nature's beauty, indulge in luxury, and rejuvenate your mind, body, and soul amidst
+			breathtaking settings. Your unforgettable retreat experience starts here.
+		</p>
+		<ul id="retreats-cards" class="grid-4-col"></ul>
+		<div class="more-div">
+			<a href="/pages/allRetreats.html" class="btn-more">
+				See All Retreats
+			</a>
+		</div>
+	</section>
+
+	<section class="black-background">
+		<img width="100%" class="overlay align-bottom" loading="lazy" src="/img/sand.png" aria-hidden="true"
+			alt="Top of sand separating sections" />
+	</section>
+
+	<section id="gallery" class="sand-background block-padded">
+		<h2 class="inline-padded center-title">Photos From Our Retreats</h2>
+		<p class="center-title" aria-label="Drag Indicator">
+			Drag to Scroll
+			<span class="indicator">
+				<img src="/svg/circle.svg" aria-hidden="true" alt="Circle indicating to scroll left or right" />
+				<img src="/svg/track.svg" aria-hidden="true" alt="Track circle moves on" />
+			</span>
+		</p>
+		<div id="gallery-carousel" class="gallery-carousel"></div>
+		<div class="more-div">
+			<a href="/pages/gallery.html" class="btn-more btn-more-dark">
+				See More Photos
+			</a>
+		</div>
+	</section>
+
+	<section id="values">
+		<img width="100%" class="overlay align-bottom" loading="lazy" src="/img/sand-inverted.png" aria-hidden="true"
+			alt="Bottom of sand separating two sections" />
+	</section>
+
+	<section id="services" class="inline-padded">
+		<h2 class="block-padded center-title">Why Sedra Travel</h2>
+		<div class="grid-sep">
+			<div class="grid-3-row">
+				<article>
+					<h3>Authentic</h3>
+					<p>
+						If you want to experience a different Jamaica, a rural, slow place
+						that doesn’t exist to cater to tourists and operates by its own
+						rhythms, then journey with us.
+					</p>
+				</article>
+				<img class="frame" src="/img/group1.jpg" alt="Picture of a group of friends looking at the sunset" />
+				<article>
+					<h3>Intimate</h3>
+					<p>
+						We keep our retreats intimate by interviewing every attendee prior
+						to the retreat. We enjoy getting to know our prospective guests
+						and want to ensure we are the right fit for what they are looking
+						for. If you're looking for a custom, private or corporate retreat,
+						we are happy to facilitate it.
+					</p>
+				</article>
+			</div>
+
+			<div class="vr"></div>
+
+			<div class="grid-3-row">
+				<img class="frame" src="/img/group2.jpg" alt="Picture of a girl playing the guitar in a camp" />
+				<article>
+					<h3>Local</h3>
+					<p>
+						Support local businesses by visiting various communities and
+						organic farms. Take in Jamaica’s rich history and culture by
+						embracing the island’s rhythm.
+					</p>
+				</article>
+				<img class="frame" src="/img/group3.jpg" alt="Picture of a man taking photos with his phone" />
+			</div>
+		</div>
+
+		<div class="block-padded more-div">
+			<a href="/pages/about.html" class="btn-more btn-more-dark"> Learn More </a>
+		</div>
+	</section>
+
+	<img class="black-background" src="/img/cloud-bottom.png" aria-hidden="true"
+		alt="Bottom of a cloud separating sections" />
+
+	<section id="testimonial" class="black-background inline-padded">
+		<h2 class="center-title block-padded">Our Travelers Words</h2>
+		<div class="grid-3-col">
+			<figure class="block-padded quote">
+				<blockquote>
+					“I had an incredible experience booking my vacation through XYZ
+					Travel Agency. Their attention to detail and personalized service
+					made all the difference. From the moment I contacted them, their
+					team was responsive and knowledgeable, helping me find the perfect
+					destination and accommodations that suited my preferences.”
+				</blockquote>
+				<figcaption>
+					<cite>Sarah H.</cite> <br />
+					<cite class="sub-cite">Hajj, <date>3 July 2022</date></cite>
+				</figcaption>
+			</figure>
+			<figure class="quote">
+				<blockquote>
+					“I had an incredible experience booking my vacation through XYZ
+					Travel Agency. Their attention to detail and personalized service
+					made all the difference. From the moment I contacted them, their
+					team was responsive and knowledgeable, helping me find the perfect
+					destination and accommodations that suited my preferences.”
+				</blockquote>
+				<figcaption>
+					<cite>Sarah H.</cite> <br />
+					<cite class="sub-cite">Hajj, <date>3 July 2022</date></cite>
+				</figcaption>
+			</figure>
+			<figure class="quote">
+				<blockquote>
+					“I had an incredible experience booking my vacation through XYZ
+					Travel Agency. Their attention to detail and personalized service
+					made all the difference. From the moment I contacted them, their
+					team was responsive and knowledgeable, helping me find the perfect
+					destination and accommodations that suited my preferences.”
+				</blockquote>
+				<figcaption>
+					<cite>Sarah H.</cite> <br />
+					<cite class="sub-cite">Hajj, <date>3 July 2022</date></cite>
+				</figcaption>
+			</figure>
+		</div>
+	</section>
+
+	<footer class="black-background inline-padded block-padded">
+		<h2 class="center-title block-padded">Get Closer To Us</h2>
+		<div class="grid-2-col">
+			<div>
+				<div class="block-padded footer-center">
+					<p class="hero-paragraph">Based in the United States</p>
+					<a>info@sedra.com<a />
+						<a href="">+1 (626) 353-4268</a>
+				</div>
+				<div class="block-padded footer-center social-list">
+					<ul class="narrow-gap">
+						<li>
+							<a href=""><img height="auto" src="/svg/instagram.svg" alt="" /></a>
+						</li>
+						<li>
+							<a href=""><img height="auto" src="/svg/facebook.svg" alt="" /></a>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="links footer-center">
+				<nav class="footer-links">
+					<ul>
+						<li><a href="/">Home</a></li>
+						<li><a href="/#retreats">Retreats</a></li>
+						<li><a href="/#gallery">Gallery</a></li>
+						<li><a href="/#values">About</a></li>
+					</ul>
+				</nav>
+				<p class="center-title">&copy;2023 All rights reserved</p>
+			</div>
+		</div>
+	</footer>
+</body>
+
 </html>
