@@ -1,0 +1,16 @@
+.book-form {
+  background-color: #000000cc;
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  z-index: 100;
+  pointer-events: all;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hidden {
+  opacity: 0;
+  pointer-events: none;
+}

@@ -5,14 +5,14 @@ import { createImageCard } from "./createImageCards.js";
 
 import { app } from "../firebase.js";
 import {
-  getFirestore,
-  doc,
-  query,
-  getDoc,
-  getDocs,
-  collection,
-  setDoc,
-  addDoc,
+	getFirestore,
+	doc,
+	query,
+	getDoc,
+	getDocs,
+	collection,
+	setDoc,
+	addDoc,
 } from "firebase/firestore";
 
 import { getStorage, listAll, ref, getDownloadURL } from "firebase/storage";
@@ -30,74 +30,74 @@ const retreatSnap = await getDoc(retreatRef);
 const bookingPage = document.querySelector(".booking-page");
 
 const retreat = new Retreat(
-  bookingPage,
-  retreatSnap.data().highlighted,
-  retreatSnap.data().arabicTitle,
-  retreatSnap.data().location,
-  retreatSnap.data().price,
-  retreatSnap.data().description,
-  retreatSnap.data().aboutRetreat,
-  retreatSnap.data().date,
-  retreatSnap.data().group
+	bookingPage,
+	retreatSnap.data().highlighted,
+	retreatSnap.data().arabicTitle,
+	retreatSnap.data().location,
+	retreatSnap.data().price,
+	retreatSnap.data().description,
+	retreatSnap.data().aboutRetreat,
+	retreatSnap.data().date,
+	retreatSnap.data().group
 );
 
 retreat.setRetreatId(urlParams);
 
 // Set page data
 bookingPage.querySelector("#booking-description").textContent =
-  retreat.description;
+	retreat.description;
 
 bookingPage.querySelector("#location").textContent = retreat.location;
 bookingPage.querySelector("#date").textContent = retreat.date;
 bookingPage.querySelector(
-  "#group"
+	"#group"
 ).textContent = `Group Size: ${retreat.group}`;
 
 bookingPage.querySelector("#booking-details").textContent =
-  retreat.aboutRetreat;
+	retreat.aboutRetreat;
 
 const headerImage = bookingPage.querySelector("#booking-header-image");
 
 const storage = getStorage();
 getDownloadURL(ref(storage, `${retreatSnap.id}/header.jpg`)).then((url) => {
-  headerImage.src = url;
+	headerImage.src = url;
 });
 
 const listRef = ref(storage, retreatURL);
 
 // Find all the prefixes and items.
 listAll(listRef)
-  .then((res) => {
-    res.items.forEach((itemRef) => {
-      getDownloadURL(itemRef).then((url) => {
-        createImageCard(url);
-      });
-    });
-  })
-  .catch((error) => {
-    // Uh-oh, an error occurred!
-  });
+	.then((res) => {
+		res.items.forEach((itemRef) => {
+			getDownloadURL(itemRef).then((url) => {
+				createImageCard(url);
+			});
+		});
+	})
+	.catch((error) => {
+		// Uh-oh, an error occurred!
+	});
 
 // Get inclusions and add it to retreat object
 const inclusionsQuery = query(
-  collection(db, "retreats", retreatURL, "inclusions")
+	collection(db, "retreats", retreatURL, "inclusions")
 );
 const inclusionSnapshots = await getDocs(inclusionsQuery);
 
 inclusionSnapshots.forEach((inclusionSnap) => {
-  retreat.inclusions.push(inclusionSnap.data());
+	retreat.inclusions.push(inclusionSnap.data());
 });
 const inclusionsContainer = bookingPage.querySelector("#inclusions");
 retreat.createInclusions(inclusionsContainer);
 
 // Get exclusions and add it to retreat object
 const exclusionsQuery = query(
-  collection(db, "retreats", retreatURL, "exclusions")
+	collection(db, "retreats", retreatURL, "exclusions")
 );
 const exclusionSnapshots = await getDocs(exclusionsQuery);
 
 exclusionSnapshots.forEach((exclusionSnap) => {
-  retreat.exclusions.push(exclusionSnap.data());
+	retreat.exclusions.push(exclusionSnap.data());
 });
 const exclusionsContainer = bookingPage.querySelector("#exclusions");
 retreat.createExclusions(exclusionsContainer);
@@ -107,7 +107,7 @@ const packagesQuery = query(collection(db, "retreats", retreatURL, "packages"));
 const packageSnapshots = await getDocs(packagesQuery);
 
 packageSnapshots.forEach((packageSnap, i) => {
-  retreat.packages.push(packageSnap.data());
+	retreat.packages.push(packageSnap.data());
 });
 
 const packagesContainer = bookingPage.querySelector("#packages");
@@ -119,31 +119,46 @@ retreat.createPackage(packagesContainer);
 
 const cardBookButtons = bookingPage.querySelectorAll(".card-book");
 
-const reservePackage = async function (packageId) {
-  await addDoc(
-    collection(db, "retreats", retreatURL, "packages", packageId, "reserves"),
-    {
-      name: "Nour El Din",
-      email: "rhasoldy@gmail.com",
-    }
-  );
+const closeButton = document.querySelector(".btn-close");
+closeButton.addEventListener("click", () => {
+	document.querySelector(".book-form").classList.add("hidden");
+});
+
+const reservePackage = async function(packageId) {
+	document.querySelector(".book-form").classList.remove("hidden");
+	document.getElementById("book-form").addEventListener("submit", async (e) => {
+		e.preventDefault();
+		let formData = new FormData(e.target);
+
+		const clientData = {};
+
+		formData.forEach(function(value, key) {
+			clientData[key] = value;
+		});
+
+		await addDoc(
+			collection(db, "retreats", retreatURL, "packages", packageId, "reserves"),
+			clientData
+		);
+	});
 };
 
 cardBookButtons?.forEach((button) => {
-  button.addEventListener("click", () => {
-    console.log(button.id);
-    reservePackage(button.id);
-  });
+	button.addEventListener("click", () => {
+		console.log(button.id);
+		reservePackage(button.id);
+	});
 });
 
 // Get itinerary and add it to retreat object
 const itineraryQuery = query(
-  collection(db, "retreats", retreatURL, "itineraries")
+	collection(db, "retreats", retreatURL, "itineraries")
 );
 const itinerarySnapshots = await getDocs(itineraryQuery);
 
 itinerarySnapshots.forEach((itinerarySnap) => {
-  retreat.itineraries.push(itinerarySnap.data());
+	retreat.itineraries.push(itinerarySnap.data());
 });
+
 const itineraryContainer = bookingPage.querySelector("#itinerary");
 retreat.createItinerary(itineraryContainer);
