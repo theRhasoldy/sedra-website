@@ -24,7 +24,9 @@ h2 {
   font-weight: 700;
 }
 
-h3 {
+h3,
+label,
+input {
   font-size: clamp(1.15rem, 1.5vw, 2rem);
   // display: flex;
   font-family: $font-headings;
