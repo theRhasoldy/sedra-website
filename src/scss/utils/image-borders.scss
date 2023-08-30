@@ -14,8 +14,12 @@
   border: 30px solid;
   border-image-source: url("/img/pattern.png");
   border-image-slice: 49; /* Adjust the slice value based on your image and desired border width */
-  border-image-width: 30px; /* Adjust the width to match the desired border width */
   border-image-repeat: revert; /* Adjust the repeat style as needed */
+  @media only screen and (min-width: 1200px) {
+    border-image-slice: 79; /* Adjust the slice value based on your image and desired border width */
+    border-image-repeat: repeat; /* Adjust the repeat style as needed */
+  }
+  border-image-width: 30px; /* Adjust the width to match the desired border width */
   @media only screen and (min-width: 768px) {
     aspect-ratio: 20/9;
     border-image-width: 50px; /* Adjust the width to match the desired border width */
