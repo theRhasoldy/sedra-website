@@ -20,7 +20,7 @@ export class Retreat {
     inclusions = [],
     exclusions = [],
     packages = [],
-    itineraries = []
+    itineraries = [],
   ) {
     this.container = container;
     this.highlighted = highlighted;
@@ -125,8 +125,8 @@ src=${headerImage}
               </button>
               <p class="package-detail">
                 Available until ${packageItem.date} ${
-        packageItem.soldOut ? " | Sold Out" : ""
-      }
+                  packageItem.soldOut ? " | Sold Out" : ""
+                }
               </p>
             </div>
           </article>
@@ -153,7 +153,7 @@ src=${headerImage}
             <p>${itinerary.details}</p>
           </div>
           <div class="cover">
-            <img src="/img/kaaba.jpg" alt="">
+            <img class="itinerary-cover" src=${itinerary.imageURL} alt="">
             <h3>${itinerary.name}</h3>
           </div>
           </article>`;
