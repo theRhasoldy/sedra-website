@@ -136,8 +136,17 @@ const reservePackage = async function (packageId) {
       clientData[key] = value;
     });
 
-    await addDoc(
-      collection(db, "retreats", retreatURL, "packages", packageId, "reserves"),
+    console.log(clientData);
+    await setDoc(
+      doc(
+        db,
+        "retreats",
+        retreatURL,
+        "packages",
+        packageId,
+        "reserves",
+        clientData["mobile"],
+      ),
       clientData,
     );
   });
