@@ -166,8 +166,10 @@ const itineraryContainer = bookingPage.querySelector("#itinerary");
 retreat.createItinerary(itineraryContainer);
 
 document.querySelectorAll(".itinerary-cover").forEach((el, i) => {
+  let letter = String.fromCharCode(97 + i); // 'a' is 97 in ASCII
+  console.log(letter);
   getDownloadURL(
-    ref(storage, `${retreatSnap.id}/itineraries/day-${i + 1}.jpg`),
+    ref(storage, `${retreatSnap.id}/itineraries/day-${letter}.jpg`),
   ).then((url) => {
     el.src = url;
   });
