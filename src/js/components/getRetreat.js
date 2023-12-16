@@ -136,19 +136,25 @@ const reservePackage = async function (packageId) {
       clientData[key] = value;
     });
 
-    console.log(clientData);
-    await setDoc(
-      doc(
-        db,
-        "retreats",
-        retreatURL,
-        "packages",
-        packageId,
-        "reserves",
-        clientData["mobile"],
-      ),
-      clientData,
-    );
+    try {
+      await setDoc(
+        doc(
+          db,
+          "retreats",
+          retreatURL,
+          "packages",
+          packageId,
+          "reserves",
+          clientData["mobile"],
+        ),
+        clientData,
+      );
+
+      document.querySelector(".book-form").classList.add("hidden");
+    } catch (error) {
+      // Handle errors from setDoc
+      console.error("Error in setDoc:", error);
+    }
   });
 };
 
